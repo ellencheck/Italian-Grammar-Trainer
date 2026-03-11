@@ -2,7 +2,7 @@
 // STATE
 // ======================
 
-let exercises = [];
+let exercises = {};
 let filtered = [];
 let currentExercise = null;
 let good = 0;
@@ -38,7 +38,7 @@ const topicMap = {
 
 
 // ======================
-// LOAD JSON (FIXED)
+// LOAD JSON
 // ======================
 
 async function loadExercises() {
@@ -61,14 +61,15 @@ async function loadExercises() {
 
       const data = await res.json();
 
-      if (!Array.isArray(data)) {
+      // ✅ теперь ожидаем OBJECT, а не ARRAY
+      if (typeof data !== "object") {
         throw new Error("Invalid JSON format");
       }
 
       exercises = data;
       exercisesLoaded = true;
 
-      console.log("✅ Exercises loaded:", exercises.length);
+      console.log("✅ Exercises loaded");
 
       return exercises;
 
@@ -110,18 +111,17 @@ async function start(topic){
 
   const realTopic = topicMap[topic] || topic;
 
- const group = exercises.find(
-  t => t.topic.trim().toLowerCase() === realTopic.trim().toLowerCase()
-);
-  
-  if(!group){
+  // ✅ доступ к теме напрямую
+  const group = exercises[realTopic];
+
+  if(!group || !group.length){
     document.getElementById("question").textContent =
       "Упражнения не найдены";
     document.getElementById("answers").innerHTML = "";
     return;
   }
 
-  filtered = group.exercises;
+  filtered = group;
 
   generateExercise();
 }
@@ -195,4 +195,3 @@ function checkAnswer(choice){
 function generate(){
   generateExercise();
 }
-
