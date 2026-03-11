@@ -1,0 +1,71 @@
+[
+{
+"topic":"aggettivi_possessivi",
+"exercises":[
+
+{"sentence":"Questo è ___ libro.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"mio"},
+{"sentence":"Quella è ___ casa.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"tuo"},
+{"sentence":"Marco prende ___ zaino.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"suo"},
+{"sentence":"Noi puliamo ___ stanza.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"nostro"},
+{"sentence":"Voi cercate ___ chiavi.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"vostro"},
+{"sentence":"I bambini portano ___ giochi.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"loro"},
+
+{"sentence":"Io prendo ___ telefono.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"mio"},
+{"sentence":"Tu apri ___ porta.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"tuo"},
+{"sentence":"Luca legge ___ giornale.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"suo"},
+{"sentence":"Noi visitiamo ___ amici.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"nostro"},
+{"sentence":"Voi vendete ___ macchina.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"vostro"},
+{"sentence":"Gli studenti dimenticano ___ libri.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"loro"},
+
+{"sentence":"Io preparo ___ cena.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"mio"},
+{"sentence":"Tu trovi ___ posto.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"tuo"},
+{"sentence":"Anna chiude ___ finestra.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"suo"},
+{"sentence":"Noi organizziamo ___ viaggio.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"nostro"},
+{"sentence":"Voi cambiate ___ piano.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"vostro"},
+{"sentence":"I ragazzi portano ___ biciclette.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"loro"},
+
+{"sentence":"Io ascolto ___ musica.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"mio"},
+{"sentence":"Tu lavi ___ mani.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"tuo"},
+{"sentence":"Paolo prende ___ cappotto.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"suo"},
+{"sentence":"Noi chiamiamo ___ amici.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"nostro"},
+{"sentence":"Voi visitate ___ città.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"vostro"},
+{"sentence":"Gli ospiti prendono ___ valigie.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"loro"},
+
+{"sentence":"Io guardo ___ film.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"mio"},
+{"sentence":"Tu chiudi ___ zaino.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"tuo"},
+{"sentence":"Giulia lava ___ capelli.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"suo"},
+{"sentence":"Noi apriamo ___ negozio.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"nostro"},
+{"sentence":"Voi finite ___ lavoro.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"vostro"},
+{"sentence":"Gli amici raccontano ___ storie.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"loro"},
+
+{"sentence":"Io porto ___ cane.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"mio"},
+{"sentence":"Tu prendi ___ bicchiere.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"tuo"},
+{"sentence":"Maria apre ___ borsa.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"suo"},
+{"sentence":"Noi leggiamo ___ giornale.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"nostro"},
+{"sentence":"Voi cercate ___ strada.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"vostro"},
+{"sentence":"I bambini mostrano ___ disegni.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"loro"},
+
+{"sentence":"Io pulisco ___ tavolo.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"mio"},
+{"sentence":"Tu lavi ___ bicicletta.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"tuo"},
+{"sentence":"Carlo prepara ___ pranzo.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"suo"},
+{"sentence":"Noi apriamo ___ porta.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"nostro"},
+{"sentence":"Voi vendete ___ casa.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"vostro"},
+{"sentence":"Gli studenti mostrano ___ compiti.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"loro"},
+
+{"sentence":"Io preparo ___ zaino.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"mio"},
+{"sentence":"Tu accendi ___ computer.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"tuo"},
+{"sentence":"Luca prende ___ giacca.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"suo"},
+{"sentence":"Noi cambiamo ___ piano.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"nostro"},
+{"sentence":"Voi sistemate ___ stanza.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"vostro"},
+{"sentence":"I turisti fotografano ___ alberghi.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"loro"},
+
+{"sentence":"Io porto ___ valigia.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"mio"},
+{"sentence":"Tu chiudi ___ porta.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"tuo"},
+{"sentence":"Anna apre ___ libro.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"suo"},
+{"sentence":"Noi vediamo ___ amici.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"nostro"},
+{"sentence":"Voi prendete ___ sedie.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"vostro"},
+{"sentence":"Gli ospiti trovano ___ camere.","options":["mio","tuo","suo","nostro","vostro","loro"],"answer":"loro"}
+
+]
+}
+]
