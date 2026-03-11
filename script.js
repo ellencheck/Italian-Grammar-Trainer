@@ -26,7 +26,7 @@ const topicMap = {
 };
 
 async function loadExercises(){
-  const res = await fetch("exercises.json");
+  const res = await fetch("./exercises.json?v=" + Date.now())
   exercises = await res.json();
 }
 
@@ -117,3 +117,4 @@ function generate(){
 }
 
 loadExercises();
+
