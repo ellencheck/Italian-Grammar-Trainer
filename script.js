@@ -3,6 +3,7 @@ let currentExercise = 0;
 let correctCount = 0;
 let wrongCount = 0;
 
+// Начало темы
 function start(topic) {
   fetch("exercises/" + topic + ".json")
     .then(response => {
@@ -14,6 +15,11 @@ function start(topic) {
       currentExercise = 0;
       correctCount = 0;
       wrongCount = 0;
+
+      // Обновляем счётчик
+      document.getElementById("good").textContent = correctCount;
+      document.getElementById("bad").textContent = wrongCount;
+
       showExercise();
     })
     .catch(error => {
@@ -22,45 +28,47 @@ function start(topic) {
     });
 }
 
+// Показ упражнения
 function showExercise() {
+  const questionDiv = document.getElementById("question");
+  const answersDiv = document.getElementById("answers");
+
   if (currentExercise >= exercises.length) {
-    document.getElementById("question").textContent = "Тема завершена!";
-    document.getElementById("answers").innerHTML = "";
-    document.getElementById("result").textContent = `✔ Правильно: ${correctCount} | ✘ Неправильно: ${wrongCount}`;
-    document.getElementById("speakBtn").style.display = "none";
+    questionDiv.textContent = "Тема завершена!";
+    answersDiv.innerHTML = "";
     return;
   }
 
   const ex = exercises[currentExercise];
-  const questionDiv = document.getElementById("question");
-  const answersDiv = document.getElementById("answers");
-  const resultDiv = document.getElementById("result");
-  const speakBtn = document.getElementById("speakBtn");
-
-  // Вопрос
   questionDiv.textContent = ex.sentence;
 
-  // Показываем кнопку озвучки
-  speakBtn.style.display = "inline-block";
-  speakBtn.onclick = () => speakText(ex.sentence);
-
-  // Очистка ответов
+  // Очистка вариантов
   answersDiv.innerHTML = "";
 
-  // Создаём кнопки вариантов
   ex.options.forEach(option => {
     const btn = document.createElement("button");
     btn.textContent = option;
-    btn.classList.add("answer"); // CSS из твоего styles.css
+    btn.classList.add("answer"); // CSS управляет дизайном
 
     btn.onclick = () => checkAnswer(option, btn);
     answersDiv.appendChild(btn);
   });
 
-  // Обновляем счёт
-  resultDiv.textContent = `✔ Правильно: ${correctCount} | ✘ Неправильно: ${wrongCount}`;
+  // Добавляем кнопку озвучки
+  let speakBtn = document.getElementById("speakBtn");
+  if (!speakBtn) {
+    speakBtn = document.createElement("button");
+    speakBtn.id = "speakBtn";
+    speakBtn.textContent = "🔊 Прослушать";
+    speakBtn.classList.add("next");
+    speakBtn.style.marginTop = "10px";
+    speakBtn.onclick = () => speakText(ex.sentence);
+    answersDiv.parentNode.insertBefore(speakBtn, answersDiv.nextSibling);
+  }
+  speakBtn.style.display = "inline-block";
 }
 
+// Проверка ответа
 function checkAnswer(answer, clickedBtn) {
   const ex = exercises[currentExercise];
   const correct = ex.answer;
@@ -80,18 +88,21 @@ function checkAnswer(answer, clickedBtn) {
     }
   }
 
+  // Обновляем счёт
   if (answer === correct) correctCount++;
   else wrongCount++;
 
-  document.getElementById("result").textContent = `✔ Правильно: ${correctCount} | ✘ Неправильно: ${wrongCount}`;
+  document.getElementById("good").textContent = correctCount;
+  document.getElementById("bad").textContent = wrongCount;
 
+  // Автоматический переход к следующему через 1 сек
   setTimeout(() => {
     currentExercise++;
     showExercise();
-  }, 1200);
+  }, 1000);
 }
 
-// Функция озвучки
+// Озвучка текста
 function speakText(text) {
   if ('speechSynthesis' in window) {
     const utter = new SpeechSynthesisUtterance(text);
@@ -100,4 +111,9 @@ function speakText(text) {
   } else {
     alert("Озвучка не поддерживается в этом браузере.");
   }
+}
+
+// Кнопка "Следующий" использует эту функцию
+function generate() {
+  if (currentExercise < exercises.length) showExercise();
 }
