@@ -24,9 +24,10 @@ function start(topic) {
 
 function showExercise() {
   if (currentExercise >= exercises.length) {
-    document.getElementById("question").innerHTML = "Тема завершена!";
+    document.getElementById("question").textContent = "Тема завершена!";
     document.getElementById("answers").innerHTML = "";
-    document.getElementById("result").innerHTML = `✔ Правильно: ${correctCount} | ✘ Неправильно: ${wrongCount}`;
+    document.getElementById("result").textContent = `✔ Правильно: ${correctCount} | ✘ Неправильно: ${wrongCount}`;
+    document.getElementById("speakBtn").style.display = "none";
     return;
   }
 
@@ -34,50 +35,44 @@ function showExercise() {
   const questionDiv = document.getElementById("question");
   const answersDiv = document.getElementById("answers");
   const resultDiv = document.getElementById("result");
+  const speakBtn = document.getElementById("speakBtn");
 
-  // Показываем вопрос
+  // Вопрос
   questionDiv.textContent = ex.sentence;
 
-  // Озвучка
-  if ('speechSynthesis' in window) {
-    const utter = new SpeechSynthesisUtterance(ex.sentence);
-    utter.lang = "it-IT"; // итальянский
-    window.speechSynthesis.speak(utter);
-  }
+  // Показываем кнопку озвучки
+  speakBtn.style.display = "inline-block";
+  speakBtn.onclick = () => speakText(ex.sentence);
 
   // Очистка ответов
   answersDiv.innerHTML = "";
 
-  // Создаём кнопки для вариантов
+  // Создаём кнопки вариантов
   ex.options.forEach(option => {
-    const button = document.createElement("button");
-    button.textContent = option;
-    button.classList.add("answer"); // теперь оформление берётся из CSS
+    const btn = document.createElement("button");
+    btn.textContent = option;
+    btn.classList.add("answer"); // CSS из твоего styles.css
 
-    button.onclick = function () {
-      checkAnswer(option, button);
-    };
-
-    answersDiv.appendChild(button);
+    btn.onclick = () => checkAnswer(option, btn);
+    answersDiv.appendChild(btn);
   });
 
   // Обновляем счёт
   resultDiv.textContent = `✔ Правильно: ${correctCount} | ✘ Неправильно: ${wrongCount}`;
 }
 
-function checkAnswer(answer, buttonClicked) {
+function checkAnswer(answer, clickedBtn) {
   const ex = exercises[currentExercise];
   const correct = ex.answer;
   const buttons = document.getElementById("answers").children;
 
-  // Подсвечиваем кнопки через CSS классы
   for (let btn of buttons) {
-    btn.disabled = true; // нельзя нажимать повторно
+    btn.disabled = true;
 
     if (btn.textContent === correct) {
       btn.classList.add("correct");
       btn.classList.remove("wrong");
-    } else if (btn === buttonClicked && answer !== correct) {
+    } else if (btn === clickedBtn && answer !== correct) {
       btn.classList.add("wrong");
       btn.classList.remove("correct");
     } else {
@@ -85,15 +80,24 @@ function checkAnswer(answer, buttonClicked) {
     }
   }
 
-  // Обновляем счёт
   if (answer === correct) correctCount++;
   else wrongCount++;
 
   document.getElementById("result").textContent = `✔ Правильно: ${correctCount} | ✘ Неправильно: ${wrongCount}`;
 
-  // Переход к следующему через 1,2 секунды
   setTimeout(() => {
     currentExercise++;
     showExercise();
   }, 1200);
+}
+
+// Функция озвучки
+function speakText(text) {
+  if ('speechSynthesis' in window) {
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = "it-IT"; // итальянский
+    window.speechSynthesis.speak(utter);
+  } else {
+    alert("Озвучка не поддерживается в этом браузере.");
+  }
 }
