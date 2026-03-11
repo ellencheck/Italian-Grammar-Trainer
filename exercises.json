@@ -505,10 +505,10 @@
       {"sentence":"Signora, ___ pure avanti.","options":["vai","vada","andiamo","andate"],"answer":"vada"},
       {"sentence":"Amici, ___ al cinema stasera.","options":["vai","vada","andiamo","andate"],"answer":"andiamo"},
       {"sentence":"Ragazzi, ___ a studiare in biblioteca.","options":["vai","vada","andiamo","andate"],"answer":"andate"},
-      {"sentence":"Marco, ___ attenzione alla strada.","options":["fa'","faccia","facciamo","fate"],"answer":"fa'"},
-      {"sentence":"Signore, ___ pure la domanda.","options":["fa'","faccia","facciamo","fate"],"answer":"faccia"},
-      {"sentence":"Amici, ___ una pausa.","options":["fa'","faccia","facciamo","fate"],"answer":"facciamo"},
-      {"sentence":"Ragazzi, ___ silenzio durante l'esame.","options":["fa'","faccia","facciamo","fate"],"answer":"fate"},
+      {"sentence":"Marco, ___ attenzione alla strada.","options":["fa’","faccia","facciamo","fate"],"answer":"fa’"},
+      {"sentence":"Signore, ___ pure la domanda.","options":["fa’","faccia","facciamo","fate"],"answer":"faccia"},
+      {"sentence":"Amici, ___ una pausa.","options":["fa’","faccia","facciamo","fate"],"answer":"facciamo"},
+      {"sentence":"Ragazzi, ___ silenzio durante l'esame.","options":["fa’","faccia","facciamo","fate"],"answer":"fate"},
       {"sentence":"Marco, ___ la verità.","options":["di'","dica","diciamo","dite"],"answer":"di'"},
       {"sentence":"Signora, ___ pure quello che pensa.","options":["di'","dica","diciamo","dite"],"answer":"dica"},
       {"sentence":"Amici, ___ tutto chiaramente.","options":["di'","dica","diciamo","dite"],"answer":"diciamo"},
@@ -560,4 +560,5 @@
       {"sentence":"Ragazzi, ___ il vostro contributo.","options":["dai","dia","diamo","date"],"answer":"date"}
        ]
   }
+
 ]
