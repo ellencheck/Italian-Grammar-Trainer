@@ -146,3 +146,31 @@ function checkAnswer(choice){
 function generate(){
   generateExercise();
 }
+async function loadExercises() {
+
+  try {
+
+    const res = await fetch(
+      "/Italian-Grammar-Trainer/exercises.json",
+      { cache: "no-store" }
+    );
+
+    const text = await res.text();
+
+    // проверяем что пришёл JSON
+    if (text.startsWith("<")) {
+      throw new Error("Получен HTML вместо JSON");
+    }
+
+    exercises = JSON.parse(text);
+
+    console.log("✅ JSON loaded");
+
+  } catch (e) {
+
+    console.error(e);
+
+    document.getElementById("question").textContent =
+      "Ошибка загрузки упражнений";
+  }
+}
