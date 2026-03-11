@@ -1,153 +1,66 @@
-// ======================
-// STATE
-// ======================
+<!-- ARTICOLI -->
+<button onclick="start('articoli_determinativi')">
+Articoli determinativi
+</button>
 
-let exercises = [];
-let filtered = [];
-let currentExercise = null;
-let good = 0;
-let bad = 0;
-
-let loaded = false;
+<button onclick="start('articoli_indeterminativi')">
+Articoli indeterminativi
+</button>
 
 
-// ======================
-// LOAD JSON
-// ======================
-
-async function loadExercises(){
-
-  if(loaded) return;
-
-  try {
-
-    const res = await fetch("./exercises.json?nocache=" + Date.now());
-
-    if(!res.ok)
-      throw new Error("JSON not loaded");
-
-    exercises = await res.json();
-
-    console.log("✅ Loaded topics:",
-      exercises.map(e => e.topic)
-    );
-
-    loaded = true;
-
-  } catch(err){
-
-    console.error(err);
-
-    document.getElementById("question").textContent =
-      "Ошибка загрузки JSON";
-  }
-}
+<!-- PRESENTE -->
+<button onclick="start('presente_verbi_irregolari')">
+Presente irregolari
+</button>
 
 
-// ======================
-// HELPERS
-// ======================
-
-function random(arr){
-  return arr[Math.floor(Math.random()*arr.length)];
-}
-
-function shuffle(arr){
-  return [...arr].sort(()=>Math.random()-0.5);
-}
+<!-- RIFLESSIVI -->
+<button onclick="start('verbi_riflessivi_presente')">
+Verbi riflessivi
+</button>
 
 
-// ======================
-// START TOPIC
-// ======================
-
-async function start(topic){
-
-  await loadExercises();
-
-  const group = exercises.find(e => e.topic === topic);
-
-  if(!group || !group.exercises?.length){
-
-    document.getElementById("question").textContent =
-      "Упражнения не найдены";
-
-    document.getElementById("answers").innerHTML="";
-    return;
-  }
-
-  filtered = group.exercises;
-
-  generateExercise();
-}
+<!-- PREPOSIZIONI -->
+<button onclick="start('preposizioni_semplici')">
+Preposizioni
+</button>
 
 
-// ======================
-// GENERATE
-// ======================
+<!-- IMPERFETTO -->
+<button onclick="start('imperfetto_regolare')">
+Imperfetto regolari
+</button>
 
-function generateExercise(){
-
-  if(!filtered.length) return;
-
-  currentExercise = random(filtered);
-
-  renderExercise(
-    currentExercise.sentence,
-    shuffle(currentExercise.options)
-  );
-}
+<button onclick="start('imperfetto_irregolare')">
+Imperfetto irregolari
+</button>
 
 
-// ======================
-// RENDER
-// ======================
+<!-- PASSATO PROSSIMO -->
+<button onclick="start('passato_prossimo_regolare')">
+Passato prossimo regolari
+</button>
 
-function renderExercise(sentence, options){
-
-  const q=document.getElementById("question");
-  const a=document.getElementById("answers");
-
-  q.textContent=sentence;
-  a.innerHTML="";
-
-  options.forEach(opt=>{
-
-    const btn=document.createElement("button");
-    btn.className="answer";
-    btn.textContent=opt;
-
-    btn.onclick=()=>checkAnswer(opt);
-
-    a.appendChild(btn);
-  });
-}
+<button onclick="start('passato_prossimo_irregolare')">
+Passato prossimo irregolari
+</button>
 
 
-// ======================
-// CHECK ANSWER
-// ======================
+<!-- FUTURO -->
+<button onclick="start('futuro_semplice_regolare')">
+Futuro regolari
+</button>
 
-function checkAnswer(choice){
-
-  if(choice===currentExercise.answer){
-    good++;
-    document.getElementById("good").textContent=good;
-    document.getElementById("result").textContent="✅ Правильно";
-  } else {
-    bad++;
-    document.getElementById("bad").textContent=bad;
-    document.getElementById("result").textContent=
-      "❌ Неправильно. Правильный ответ: "
-      + currentExercise.answer;
-  }
-}
+<button onclick="start('futuro_semplice_irregolare')">
+Futuro irregolari
+</button>
 
 
-// ======================
-// NEXT
-// ======================
+<!-- IMPERATIVO -->
+<button onclick="start('imperativo_regolare')">
+Imperativo regolari
+</button>
 
-function generate(){
-  generateExercise();
-}
+<button onclick="start('imperativo_irregolare')">
+Imperativo irregolari
+</button>
