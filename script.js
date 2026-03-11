@@ -12,7 +12,7 @@ function start(topic) {
     })
     .then(data => {
 
-      exercises = data;
+      exercises = data.exercises;
       currentExercise = 0;
 
       showExercise();
@@ -25,20 +25,20 @@ function start(topic) {
 
 }
 
-
 function showExercise() {
 
   if (currentExercise >= exercises.length) {
-    document.getElementById("exercise").innerHTML = "Тема завершена!";
+    document.getElementById("question").innerHTML = "Тема завершена!";
+    document.getElementById("answers").innerHTML = "";
     return;
   }
 
   const ex = exercises[currentExercise];
 
-  document.getElementById("exercise").innerHTML = ex.sentence;
+  document.getElementById("question").innerHTML = ex.sentence;
 
-  const optionsDiv = document.getElementById("options");
-  optionsDiv.innerHTML = "";
+  const answersDiv = document.getElementById("answers");
+  answersDiv.innerHTML = "";
 
   ex.options.forEach(option => {
 
@@ -49,24 +49,26 @@ function showExercise() {
       checkAnswer(option);
     };
 
-    optionsDiv.appendChild(button);
+    answersDiv.appendChild(button);
 
   });
 
 }
 
-
 function checkAnswer(answer) {
 
   const correct = exercises[currentExercise].answer;
+  const result = document.getElementById("result");
 
   if (answer === correct) {
-    alert("Правильно!");
+    result.innerHTML = "✔ Правильно";
   } else {
-    alert("Неправильно. Правильный ответ: " + correct);
+    result.innerHTML = "✘ Неправильно. Ответ: " + correct;
   }
 
   currentExercise++;
-  showExercise();
+}
 
+function generate(){
+  showExercise();
 }
