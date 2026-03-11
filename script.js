@@ -8,28 +8,63 @@ let currentExercise = null;
 let good = 0;
 let bad = 0;
 
-let loaded = false;
+let exercisesLoaded = false;
+let loadingPromise = null;
+
+
+// ======================
+// TOPIC MAP
+// ======================
+
+const topicMap = {
+  art_def: "articoli_determinativi",
+  art_indef: "articoli_indeterminativi",
+  art_prep: "preposizioni_articolate",
+  genere: "genere",
+
+  pres_reg: "presente_regolari",
+
+  // ✅ FIX — имя строго как в JSON
+  pres_irr: "presente_verbi_irregolari",
+
+  riflessivi: "riflessivi",
+  possessivi: "possessivi",
+  prep: "preposizioni",
+  imp_reg: "imperfetto_regolari",
+  imp_irr: "imperfetto_irregolari",
+  pp_reg: "passato_prossimo_regolari",
+  pp_irr: "passato_prossimo_irregolari",
+  fut_reg: "futuro_regolari",
+  fut_irr: "futuro_irregolari",
+  impv_reg: "imperativo_regolari",
+  impv_irr: "imperativo_irregolari"
+};
 
 
 // ======================
 // LOAD JSON
 // ======================
 
-async function loadExercises(){
+async function loadExercises() {
 
-  if(loaded) return;
+  if (exercisesLoaded) return exercises;
+  if (loadingPromise) return loadingPromise;
 
-  const res = await fetch("./exercises.json", {
-    cache: "no-store"
-  });
+  loadingPromise = (async () => {
 
-  exercises = await res.json();
+    const res = await fetch("./exercises.json", {
+      cache: "no-store"
+    });
 
-  loaded = true;
+    const data = await res.json();
 
-  console.log("✅ Loaded topics:",
-    exercises.map(e => e.topic)
-  );
+    exercises = data;
+    exercisesLoaded = true;
+
+    return exercises;
+  })();
+
+  return loadingPromise;
 }
 
 
@@ -42,7 +77,7 @@ function random(arr){
 }
 
 function shuffle(arr){
-  return [...arr].sort(()=>Math.random()-0.5);
+  return [...arr].sort(() => Math.random() - 0.5);
 }
 
 
@@ -54,12 +89,16 @@ async function start(topic){
 
   await loadExercises();
 
-  const group = exercises.find(e => e.topic === topic);
+  const realTopic = topicMap[topic] || topic;
 
-  if(!group){
+  const group = exercises.find(
+    t => t.topic === realTopic
+  );
+
+  if(!group || !group.exercises.length){
     document.getElementById("question").textContent =
       "Упражнения не найдены";
-    document.getElementById("answers").innerHTML="";
+    document.getElementById("answers").innerHTML = "";
     return;
   }
 
@@ -70,7 +109,7 @@ async function start(topic){
 
 
 // ======================
-// GENERATE
+// GENERATE EXERCISE
 // ======================
 
 function generateExercise(){
@@ -92,19 +131,19 @@ function generateExercise(){
 
 function renderExercise(sentence, options){
 
-  const q=document.getElementById("question");
-  const a=document.getElementById("answers");
+  const q = document.getElementById("question");
+  const a = document.getElementById("answers");
 
-  q.textContent=sentence;
-  a.innerHTML="";
+  q.textContent = sentence;
+  a.innerHTML = "";
 
-  options.forEach(opt=>{
+  options.forEach(opt => {
 
-    const btn=document.createElement("button");
-    btn.className="answer";
-    btn.textContent=opt;
+    const btn = document.createElement("button");
+    btn.className = "answer";
+    btn.textContent = opt;
 
-    btn.onclick=()=>checkAnswer(opt);
+    btn.onclick = () => checkAnswer(opt);
 
     a.appendChild(btn);
   });
@@ -117,22 +156,21 @@ function renderExercise(sentence, options){
 
 function checkAnswer(choice){
 
-  if(choice===currentExercise.answer){
+  if(choice === currentExercise.answer){
     good++;
-    document.getElementById("good").textContent=good;
-    document.getElementById("result").textContent="✅ Правильно";
+    document.getElementById("good").textContent = good;
+    document.getElementById("result").textContent = "✅ Правильно";
   } else {
     bad++;
-    document.getElementById("bad").textContent=bad;
-    document.getElementById("result").textContent=
-      "❌ Неправильно. Правильный ответ: "
-      + currentExercise.answer;
+    document.getElementById("bad").textContent = bad;
+    document.getElementById("result").textContent =
+      "❌ Неправильно. Правильный ответ: " + currentExercise.answer;
   }
 }
 
 
 // ======================
-// NEXT
+// NEXT BUTTON
 // ======================
 
 function generate(){
