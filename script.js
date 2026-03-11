@@ -2,7 +2,7 @@
 // STATE
 // ======================
 
-let exercises = {};
+let exercises = [];   // ✅ FIX 1
 let filtered = [];
 let currentExercise = null;
 let good = 0;
@@ -50,10 +50,9 @@ async function loadExercises() {
 
     try {
 
-      const res = await fetch("./exercises.json",
-
-        { cache: "no-store" }
-      );
+      const res = await fetch("./exercises.json", {
+        cache: "no-store"
+      });
 
       if (!res.ok) {
         throw new Error("JSON not found: " + res.status);
@@ -61,15 +60,15 @@ async function loadExercises() {
 
       const data = await res.json();
 
-      // ✅ теперь ожидаем OBJECT, а не ARRAY
-      if (typeof data !== "object") {
+      // ✅ FIX 2 — JSON должен быть массивом
+      if (!Array.isArray(data)) {
         throw new Error("Invalid JSON format");
       }
 
       exercises = data;
       exercisesLoaded = true;
 
-      console.log("✅ Exercises loaded");
+      console.log("✅ Exercises loaded:", exercises.length);
 
       return exercises;
 
@@ -79,7 +78,6 @@ async function loadExercises() {
 
       document.getElementById("question").textContent =
         "Ошибка загрузки упражнений";
-
     }
 
   })();
@@ -111,18 +109,21 @@ async function start(topic){
 
   const realTopic = topicMap[topic] || topic;
 
-  // ✅ доступ к теме напрямую
- const group = exercises.find(
-  t => t.topic === realTopic
-);
-  if(!group || !group.length){
+  // ✅ FIX 3 — правильный поиск темы
+  const group = exercises.find(
+    t => t.topic === realTopic
+  );
+
+  // ✅ FIX 4 — проверяем только существование
+  if(!group){
     document.getElementById("question").textContent =
       "Упражнения не найдены";
     document.getElementById("answers").innerHTML = "";
     return;
   }
 
-  filtered = group;
+  // ✅ FIX 5 — берём массив упражнений
+  filtered = group.exercises;
 
   generateExercise();
 }
@@ -196,5 +197,3 @@ function checkAnswer(choice){
 function generate(){
   generateExercise();
 }
-
-
