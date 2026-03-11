@@ -116,5 +116,8 @@ function generate(){
   generateExercise();
 }
 
-loadExercises();
+window.addEventListener("DOMContentLoaded", () => {
+  loadExercises();
+});
+
 
