@@ -8,63 +8,39 @@ let currentExercise = null;
 let good = 0;
 let bad = 0;
 
-let exercisesLoaded = false;
-let loadingPromise = null;
-
-
-// ======================
-// TOPIC MAP
-// ======================
-
-const topicMap = {
-  art_def: "articoli_determinativi",
-  art_indef: "articoli_indeterminativi",
-  art_prep: "preposizioni_articolate",
-  genere: "genere",
-
-  pres_reg: "presente_regolari",
-
-  // ✅ FIX — имя строго как в JSON
-  pres_irr: "presente_verbi_irregolari",
-
-  riflessivi: "riflessivi",
-  possessivi: "possessivi",
-  prep: "preposizioni",
-  imp_reg: "imperfetto_regolari",
-  imp_irr: "imperfetto_irregolari",
-  pp_reg: "passato_prossimo_regolari",
-  pp_irr: "passato_prossimo_irregolari",
-  fut_reg: "futuro_regolari",
-  fut_irr: "futuro_irregolari",
-  impv_reg: "imperativo_regolari",
-  impv_irr: "imperativo_irregolari"
-};
+let loaded = false;
 
 
 // ======================
 // LOAD JSON
 // ======================
 
-async function loadExercises() {
+async function loadExercises(){
 
-  if (exercisesLoaded) return exercises;
-  if (loadingPromise) return loadingPromise;
+  if(loaded) return;
 
-  loadingPromise = (async () => {
+  try {
 
-    const res = await fetch("./exercises.json", {
-      cache: "no-store"
-    });
+    const res = await fetch("./exercises.json?nocache=" + Date.now());
 
-    const data = await res.json();
+    if(!res.ok)
+      throw new Error("JSON not loaded");
 
-    exercises = data;
-    exercisesLoaded = true;
+    exercises = await res.json();
 
-    return exercises;
-  })();
+    console.log("✅ Loaded topics:",
+      exercises.map(e => e.topic)
+    );
 
-  return loadingPromise;
+    loaded = true;
+
+  } catch(err){
+
+    console.error(err);
+
+    document.getElementById("question").textContent =
+      "Ошибка загрузки JSON";
+  }
 }
 
 
@@ -77,7 +53,7 @@ function random(arr){
 }
 
 function shuffle(arr){
-  return [...arr].sort(() => Math.random() - 0.5);
+  return [...arr].sort(()=>Math.random()-0.5);
 }
 
 
@@ -89,16 +65,14 @@ async function start(topic){
 
   await loadExercises();
 
-  const realTopic = topicMap[topic] || topic;
+  const group = exercises.find(e => e.topic === topic);
 
-  const group = exercises.find(
-    t => t.topic === realTopic
-  );
+  if(!group || !group.exercises?.length){
 
-  if(!group || !group.exercises.length){
     document.getElementById("question").textContent =
       "Упражнения не найдены";
-    document.getElementById("answers").innerHTML = "";
+
+    document.getElementById("answers").innerHTML="";
     return;
   }
 
@@ -109,7 +83,7 @@ async function start(topic){
 
 
 // ======================
-// GENERATE EXERCISE
+// GENERATE
 // ======================
 
 function generateExercise(){
@@ -131,19 +105,19 @@ function generateExercise(){
 
 function renderExercise(sentence, options){
 
-  const q = document.getElementById("question");
-  const a = document.getElementById("answers");
+  const q=document.getElementById("question");
+  const a=document.getElementById("answers");
 
-  q.textContent = sentence;
-  a.innerHTML = "";
+  q.textContent=sentence;
+  a.innerHTML="";
 
-  options.forEach(opt => {
+  options.forEach(opt=>{
 
-    const btn = document.createElement("button");
-    btn.className = "answer";
-    btn.textContent = opt;
+    const btn=document.createElement("button");
+    btn.className="answer";
+    btn.textContent=opt;
 
-    btn.onclick = () => checkAnswer(opt);
+    btn.onclick=()=>checkAnswer(opt);
 
     a.appendChild(btn);
   });
@@ -156,21 +130,22 @@ function renderExercise(sentence, options){
 
 function checkAnswer(choice){
 
-  if(choice === currentExercise.answer){
+  if(choice===currentExercise.answer){
     good++;
-    document.getElementById("good").textContent = good;
-    document.getElementById("result").textContent = "✅ Правильно";
+    document.getElementById("good").textContent=good;
+    document.getElementById("result").textContent="✅ Правильно";
   } else {
     bad++;
-    document.getElementById("bad").textContent = bad;
-    document.getElementById("result").textContent =
-      "❌ Неправильно. Правильный ответ: " + currentExercise.answer;
+    document.getElementById("bad").textContent=bad;
+    document.getElementById("result").textContent=
+      "❌ Неправильно. Правильный ответ: "
+      + currentExercise.answer;
   }
 }
 
 
 // ======================
-// NEXT BUTTON
+// NEXT
 // ======================
 
 function generate(){
