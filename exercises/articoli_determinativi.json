@@ -1,1 +1,74 @@
+[
+{
+"topic":"articoli_determinativi",
+"exercises":[
 
+{"sentence":"___ gatto dorme.","options":["il","lo","la","l'","i","gli","le"],"answer":"il"},
+{"sentence":"___ studente studia.","options":["il","lo","la","l'","i","gli","le"],"answer":"lo"},
+{"sentence":"___ ragazza canta.","options":["il","lo","la","l'","i","gli","le"],"answer":"la"},
+{"sentence":"___ cane corre.","options":["il","lo","la","l'","i","gli","le"],"answer":"il"},
+{"sentence":"___ zaino cade.","options":["il","lo","la","l'","i","gli","le"],"answer":"lo"},
+{"sentence":"___ porta si apre.","options":["il","lo","la","l'","i","gli","le"],"answer":"la"},
+{"sentence":"___ telefono squilla.","options":["il","lo","la","l'","i","gli","le"],"answer":"il"},
+{"sentence":"___ specchio riflette.","options":["il","lo","la","l'","i","gli","le"],"answer":"lo"},
+{"sentence":"___ macchina parte.","options":["il","lo","la","l'","i","gli","le"],"answer":"la"},
+{"sentence":"___ bambino ride.","options":["il","lo","la","l'","i","gli","le"],"answer":"il"},
+
+{"sentence":"___ amici arrivano.","options":["il","lo","la","l'","i","gli","le"],"answer":"gli"},
+{"sentence":"___ ragazzi giocano.","options":["il","lo","la","l'","i","gli","le"],"answer":"i"},
+{"sentence":"___ studentesse leggono.","options":["il","lo","la","l'","i","gli","le"],"answer":"le"},
+{"sentence":"___ alberi crescono.","options":["il","lo","la","l'","i","gli","le"],"answer":"gli"},
+{"sentence":"___ libri cadono.","options":["il","lo","la","l'","i","gli","le"],"answer":"i"},
+{"sentence":"___ case brillano.","options":["il","lo","la","l'","i","gli","le"],"answer":"le"},
+{"sentence":"___ zii parlano.","options":["il","lo","la","l'","i","gli","le"],"answer":"gli"},
+{"sentence":"___ bambini giocano.","options":["il","lo","la","l'","i","gli","le"],"answer":"i"},
+{"sentence":"___ porte sbattono.","options":["il","lo","la","l'","i","gli","le"],"answer":"le"},
+{"sentence":"___ occhi guardano.","options":["il","lo","la","l'","i","gli","le"],"answer":"gli"},
+
+{"sentence":"___ treno arriva.","options":["il","lo","la","l'","i","gli","le"],"answer":"il"},
+{"sentence":"___ spettacolo inizia.","options":["il","lo","la","l'","i","gli","le"],"answer":"lo"},
+{"sentence":"___ finestra si chiude.","options":["il","lo","la","l'","i","gli","le"],"answer":"la"},
+{"sentence":"___ giornale cade.","options":["il","lo","la","l'","i","gli","le"],"answer":"il"},
+{"sentence":"___ storia continua.","options":["il","lo","la","l'","i","gli","le"],"answer":"la"},
+{"sentence":"___ zaino si apre.","options":["il","lo","la","l'","i","gli","le"],"answer":"lo"},
+{"sentence":"___ computer si accende.","options":["il","lo","la","l'","i","gli","le"],"answer":"il"},
+{"sentence":"___ macchina frena.","options":["il","lo","la","l'","i","gli","le"],"answer":"la"},
+{"sentence":"___ studente risponde.","options":["il","lo","la","l'","i","gli","le"],"answer":"lo"},
+{"sentence":"___ cena è pronta.","options":["il","lo","la","l'","i","gli","le"],"answer":"la"},
+
+{"sentence":"___ professori spiegano.","options":["il","lo","la","l'","i","gli","le"],"answer":"i"},
+{"sentence":"___ studenti ascoltano.","options":["il","lo","la","l'","i","gli","le"],"answer":"gli"},
+{"sentence":"___ ragazze ridono.","options":["il","lo","la","l'","i","gli","le"],"answer":"le"},
+{"sentence":"___ amici partono.","options":["il","lo","la","l'","i","gli","le"],"answer":"gli"},
+{"sentence":"___ cani abbaiano.","options":["il","lo","la","l'","i","gli","le"],"answer":"i"},
+{"sentence":"___ sedie cadono.","options":["il","lo","la","l'","i","gli","le"],"answer":"le"},
+{"sentence":"___ italiani parlano.","options":["il","lo","la","l'","i","gli","le"],"answer":"gli"},
+{"sentence":"___ bambini ridono.","options":["il","lo","la","l'","i","gli","le"],"answer":"i"},
+{"sentence":"___ porte cigolano.","options":["il","lo","la","l'","i","gli","le"],"answer":"le"},
+{"sentence":"___ uomini lavorano.","options":["il","lo","la","l'","i","gli","le"],"answer":"gli"},
+
+{"sentence":"___ tavolo è grande.","options":["il","lo","la","l'","i","gli","le"],"answer":"il"},
+{"sentence":"___ studente arriva.","options":["il","lo","la","l'","i","gli","le"],"answer":"lo"},
+{"sentence":"___ strada è lunga.","options":["il","lo","la","l'","i","gli","le"],"answer":"la"},
+{"sentence":"___ vino è buono.","options":["il","lo","la","l'","i","gli","le"],"answer":"il"},
+{"sentence":"___ zucchero manca.","options":["il","lo","la","l'","i","gli","le"],"answer":"lo"},
+{"sentence":"___ cucina è pulita.","options":["il","lo","la","l'","i","gli","le"],"answer":"la"},
+{"sentence":"___ libro è interessante.","options":["il","lo","la","l'","i","gli","le"],"answer":"il"},
+{"sentence":"___ spettacolo continua.","options":["il","lo","la","l'","i","gli","le"],"answer":"lo"},
+{"sentence":"___ casa è bella.","options":["il","lo","la","l'","i","gli","le"],"answer":"la"},
+{"sentence":"___ tempo cambia.","options":["il","lo","la","l'","i","gli","le"],"answer":"il"},
+
+{"sentence":"___ amico arriva.","options":["il","lo","la","l'","i","gli","le"],"answer":"l'"},
+{"sentence":"___ isola è grande.","options":["il","lo","la","l'","i","gli","le"],"answer":"l'"},
+{"sentence":"___ albero cade.","options":["il","lo","la","l'","i","gli","le"],"answer":"l'"},
+{"sentence":"___ acqua è fredda.","options":["il","lo","la","l'","i","gli","le"],"answer":"l'"},
+{"sentence":"___ animale dorme.","options":["il","lo","la","l'","i","gli","le"],"answer":"l'"},
+{"sentence":"___ amici ridono.","options":["il","lo","la","l'","i","gli","le"],"answer":"gli"},
+{"sentence":"___ libri restano.","options":["il","lo","la","l'","i","gli","le"],"answer":"i"},
+{"sentence":"___ sedie scricchiolano.","options":["il","lo","la","l'","i","gli","le"],"answer":"le"},
+{"sentence":"___ alberi crescono.","options":["il","lo","la","l'","i","gli","le"],"answer":"gli"},
+{"sentence":"___ ragazzi studiano.","options":["il","lo","la","l'","i","gli","le"],"answer":"i"}
+
+]
+}
+]
