@@ -1,5 +1,5 @@
 {
-"topic":"articoli_indeterminativi",
+"topic":"art_indef",
 "exercises":[
 
 {"sentence":"Ho visto ___ gatto nel giardino.","options":["un","uno","una","un'"],"answer":"un"},
@@ -66,7 +66,29 @@
 {"sentence":"Maria compra ___ borsa elegante.","options":["un","uno","una","un'"],"answer":"una"},
 {"sentence":"Ho visto ___ anatra bianca.","options":["un","uno","una","un'"],"answer":"un'"},
 {"sentence":"Marco ha ___ cane piccolo.","options":["un","uno","una","un'"],"answer":"un"},
-{"sentence":"Cerco ___ psicologo famoso.","options":["un","uno","una","un'"],"answer":"uno"}
+{"sentence":"Cerco ___ psicologo famoso.","options":["un","uno","una","un'"],"answer":"uno"},
+
+{"sentence":"Ho visto ___ amica.","options":["un","uno","una","un'"],"answer":"un'"},
+{"sentence":"Marco compra ___ libro nuovo.","options":["un","uno","una","un'"],"answer":"un"},
+{"sentence":"Cerco ___ studente straniero.","options":["un","uno","una","un'"],"answer":"uno"},
+{"sentence":"Maria ha ___ casa grande.","options":["un","uno","una","un'"],"answer":"una"},
+{"sentence":"Ho avuto ___ opportunità.","options":["un","uno","una","un'"],"answer":"un'"},
+{"sentence":"Abbiamo visto ___ cane bianco.","options":["un","uno","una","un'"],"answer":"un"},
+{"sentence":"Cerchiamo ___ psicologo giovane.","options":["un","uno","una","un'"],"answer":"uno"},
+{"sentence":"Lei compra ___ borsa nuova.","options":["un","uno","una","un'"],"answer":"una"},
+{"sentence":"Ho visto ___ anatra nera.","options":["un","uno","una","un'"],"answer":"un'"},
+{"sentence":"Marco ha ___ film interessante.","options":["un","uno","una","un'"],"answer":"un"},
+
+{"sentence":"Cerco ___ studente motivato.","options":["un","uno","una","un'"],"answer":"uno"},
+{"sentence":"Maria compra ___ macchina.","options":["un","uno","una","un'"],"answer":"una"},
+{"sentence":"Ho avuto ___ esperienza utile.","options":["un","uno","una","un'"],"answer":"un'"},
+{"sentence":"Ho visto ___ cane nero.","options":["un","uno","una","un'"],"answer":"un"},
+{"sentence":"Cerco ___ psicologo italiano.","options":["un","uno","una","un'"],"answer":"uno"},
+{"sentence":"Lei compra ___ maglia blu.","options":["un","uno","una","un'"],"answer":"una"},
+{"sentence":"Ho visto ___ isola bella.","options":["un","uno","una","un'"],"answer":"un'"},
+{"sentence":"Marco ha ___ libro interessante.","options":["un","uno","una","un'"],"answer":"un"},
+{"sentence":"Cerchiamo ___ studente serio.","options":["un","uno","una","un'"],"answer":"uno"},
+{"sentence":"Maria compra ___ casa nuova.","options":["un","uno","una","un'"],"answer":"una"}
 
 ]
 }
