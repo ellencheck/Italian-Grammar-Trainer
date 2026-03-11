@@ -1,196 +1,89 @@
-/* ======================
-   BASE
-====================== */
-
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: #cfd8d3;
-  overflow-x: hidden;       /* запрещаем горизонтальный скролл */
+  overflow-x: hidden; /* горизонтальный скролл запрещен */
 }
 
 body {
-  /* удалили центрирование */
-  display: block;
+  display: block; /* контейнер на всю ширину */
 }
 
-/* контейнер теперь растягивается на весь экран ноутбука, скролл по вертикали */
-.container {
-  width: 100%;              /* занимает всю ширину экрана */
-  min-height: 100vh;        /* минимум высота = высоте экрана */
-  margin: 0;
-  padding: 40px 20px;       /* оставляем padding */
+/* ======================
+   EXERCISE SCREEN
+====================== */
+
+.exercise-screen {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
   box-sizing: border-box;
-  text-align: center;
-  overflow-y: auto;         /* вертикальный скролл если контент большой */
+  background-color: #e7ebe8;
+  overflow-y: auto; /* вертикальный скролл */
 }
 
-/* ======================
-   TITLE
-====================== */
-
-h1 {
-  font-size: 26px;          
+.exercise-screen h1 {
+  font-size: 75px; /* крупный шрифт для вопросов */
   color: #2e5f3e;
   font-weight: 600;
-  margin-bottom: 25px;
-}
-
-/* ======================
-   MAIN CARD (MENU)
-====================== */
-
-.menu {
-  background: #e7ebe8;
-  padding: 28px;              
-  border-radius: 14px;
-  margin-bottom: 30px;
-}
-
-/* A1 / A2 labels */
-
-.menu h2 {
-  font-size: 16px;            
-  color: #2e5f3e;
-  margin: 20px 0 10px;
-  font-weight: 600;
+  margin-bottom: 40px;
   text-align: center;
 }
 
-/* section titles */
-
-.menu h3 {
-  font-size: 14px;            
-  color: #355f47;
-  text-align: left;
-  margin: 16px 0 8px;
-  font-weight: 600;
-}
-
-/* ======================
-   GREEN BUTTONS
-====================== */
-
-.menu button {
+.exercise-screen .answer {
   width: 100%;
   border: none;
   border-radius: 14px;
-  padding: 12px;              
-  margin-bottom: 10px;
-
-  font-size: 14px;            
-  color: white;
-  cursor: pointer;
-
-  background-color: #5fa574;
-  transition: 0.2s;
-}
-
-.menu button:nth-child(odd) {
-  background-color: #6fb583;
-}
-
-.menu button:nth-child(even) {
-  background-color: #4f9467;
-}
-
-.menu button:hover {
-  filter: brightness(1.08);
-}
-
-/* ======================
-   TRAINER CARD
-====================== */
-
-.card {
-  background: #e7ebe8;
-  border-radius: 14px;
-  padding: 28px;              
-  margin-bottom: 20px;
-}
-
-.card h2 {
-  font-size: 16px;            
+  padding: 30px;      /* крупные кнопки */
+  margin: 20px 0;
+  font-size: 50px;    /* крупный шрифт для вариантов */
+  font-weight: 700;
   color: #2e5f3e;
-  font-weight: 500;
-}
-
-/* ======================
-   ANSWERS
-====================== */
-
-.answer {
-  width: 100%;
-  border: none;
-  border-radius: 14px;
-  padding: 12px;              
-  margin-top: 10px;
-
   background-color: #f2f4f3;
-  color: #2e5f3e;
-  border: 2px solid #cfd8d3;
-  font-weight: 600;
-  font-size: 14px;            
+  border: 3px solid #cfd8d3;
   cursor: pointer;
-
   transition: 0.2s;
 }
 
-.answer:hover {
+.exercise-screen .answer:hover {
   background-color: #e3ebe6;
   border-color: #5fa574;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
-.answer.correct {
+.exercise-screen .answer.correct {
   background-color: #5fa574;
   color: white;
   border-color: #5fa574;
 }
 
-.answer.wrong {
+.exercise-screen .answer.wrong {
   background-color: #c96a6a;
   color: white;
   border-color: #c96a6a;
 }
 
-/* ======================
-   RESULT
-====================== */
-
-#result {
-  margin-top: 12px;
-  font-size: 14px;            
+.exercise-screen #result {
+  font-size: 45px;
   color: #2e5f3e;
+  margin-top: 30px;
+  text-align: center;
 }
 
-/* ======================
-   STATS
-====================== */
-
-.stats {
-  font-size: 14px;            
-  color: #2e5f3e;
-  margin-bottom: 15px;
-}
-
-/* ======================
-   NEXT BUTTON
-====================== */
-
-.next {
-  border: none;
+.exercise-screen .next {
+  width: 100%;
+  padding: 25px 0;
+  font-size: 50px;
   border-radius: 14px;
-  padding: 10px 22px;         
-  font-size: 14px;             
-  color: white;
-  cursor: pointer;
-
   background-color: #5fa574;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
 }
 
-.next:hover {
+.exercise-screen .next:hover {
   filter: brightness(1.1);
 }
