@@ -50,8 +50,8 @@ async function loadExercises() {
 
     try {
 
-      const res = await fetch(
-        "/Italian-Grammar-Trainer/exercises.json",
+      const res = await fetch("./exercises.json",
+
         { cache: "no-store" }
       );
 
@@ -195,3 +195,4 @@ function checkAnswer(choice){
 function generate(){
   generateExercise();
 }
+
