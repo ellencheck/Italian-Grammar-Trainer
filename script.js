@@ -112,8 +112,9 @@ async function start(topic){
   const realTopic = topicMap[topic] || topic;
 
   // ✅ доступ к теме напрямую
-  const group = exercises[realTopic];
-
+ const group = exercises.find(
+  t => t.topic === realTopic
+);
   if(!group || !group.length){
     document.getElementById("question").textContent =
       "Упражнения не найдены";
@@ -195,4 +196,5 @@ function checkAnswer(choice){
 function generate(){
   generateExercise();
 }
+
 
