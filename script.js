@@ -17,25 +17,40 @@ let loadingPromise = null;
 // ======================
 
 const topicMap = {
+
+  // ARTICOLI
   art_def: "articoli_determinativi",
   art_indef: "articoli_indeterminativi",
-  art_prep: "preposizioni_articolate",
-  genere: "genere",
-  pres_reg: "presente_regolari",
-  pres_irr: "presente_irregolari",
-  riflessivi: "riflessivi",
-  possessivi: "possessivi",
-  prep: "preposizioni",
-  imp_reg: "imperfetto_regolari",
-  imp_irr: "imperfetto_irregolari",
-  pp_reg: "passato_prossimo_regolari",
-  pp_irr: "passato_prossimo_irregolari",
-  fut_reg: "futuro_regolari",
-  fut_irr: "futuro_irregolari",
-  impv_reg: "imperativo_regolari",
-  impv_irr: "imperativo_irregolari"
-};
 
+  // PRESENTE
+  pres_irr: "presente_verbi_irregolari",
+  riflessivi: "verbi_riflessivi_presente",
+
+  // PREPOSIZIONI
+  prep: "preposizioni_semplici",
+
+  // IMPERFETTO
+  imp_reg: "imperfetto_regolare",
+  imp_irr: "imperfetto_irregolare",
+
+  // PASSATO PROSSIMO
+  pp_reg: "passato_prossimo_regolare",
+  pp_irr: "passato_prossimo_irregolare",
+
+  // FUTURO
+  fut_reg: "futuro_semplice_regolare",
+  fut_irr: "futuro_semplice_irregolare",
+
+  // IMPERATIVO
+  impv_reg: "imperativo_regolare",
+  impv_irr: "imperativo_irregolare",
+
+  // 👇 ДОБАВЛЕННЫЕ (которые раньше отсутствовали)
+  genere: "genere",
+  possessivi: "possessivi",
+  art_prep: "preposizioni_articolate",
+  pres_reg: "presente_regolari"
+};
 
 // ======================
 // LOAD JSON
@@ -197,3 +212,4 @@ function checkAnswer(choice){
 function generate(){
   generateExercise();
 }
+
