@@ -1,66 +1,72 @@
-<!-- ARTICOLI -->
-<button onclick="start('articoli_determinativi')">
-Articoli determinativi
-</button>
+let exercises = [];
+let currentExercise = 0;
 
-<button onclick="start('articoli_indeterminativi')">
-Articoli indeterminativi
-</button>
+function start(topic) {
 
+  fetch("exercises/" + topic + ".json")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Файл не найден: " + topic);
+      }
+      return response.json();
+    })
+    .then(data => {
 
-<!-- PRESENTE -->
-<button onclick="start('presente_verbi_irregolari')">
-Presente irregolari
-</button>
+      exercises = data;
+      currentExercise = 0;
 
+      showExercise();
 
-<!-- RIFLESSIVI -->
-<button onclick="start('verbi_riflessivi_presente')">
-Verbi riflessivi
-</button>
+    })
+    .catch(error => {
+      console.error(error);
+      alert("Ошибка загрузки темы: " + topic);
+    });
 
-
-<!-- PREPOSIZIONI -->
-<button onclick="start('preposizioni_semplici')">
-Preposizioni
-</button>
-
-
-<!-- IMPERFETTO -->
-<button onclick="start('imperfetto_regolare')">
-Imperfetto regolari
-</button>
-
-<button onclick="start('imperfetto_irregolare')">
-Imperfetto irregolari
-</button>
+}
 
 
-<!-- PASSATO PROSSIMO -->
-<button onclick="start('passato_prossimo_regolare')">
-Passato prossimo regolari
-</button>
+function showExercise() {
 
-<button onclick="start('passato_prossimo_irregolare')">
-Passato prossimo irregolari
-</button>
+  if (currentExercise >= exercises.length) {
+    document.getElementById("exercise").innerHTML = "Тема завершена!";
+    return;
+  }
+
+  const ex = exercises[currentExercise];
+
+  document.getElementById("exercise").innerHTML = ex.sentence;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  ex.options.forEach(option => {
+
+    const button = document.createElement("button");
+    button.textContent = option;
+
+    button.onclick = function () {
+      checkAnswer(option);
+    };
+
+    optionsDiv.appendChild(button);
+
+  });
+
+}
 
 
-<!-- FUTURO -->
-<button onclick="start('futuro_semplice_regolare')">
-Futuro regolari
-</button>
+function checkAnswer(answer) {
 
-<button onclick="start('futuro_semplice_irregolare')">
-Futuro irregolari
-</button>
+  const correct = exercises[currentExercise].answer;
 
+  if (answer === correct) {
+    alert("Правильно!");
+  } else {
+    alert("Неправильно. Правильный ответ: " + correct);
+  }
 
-<!-- IMPERATIVO -->
-<button onclick="start('imperativo_regolare')">
-Imperativo regolari
-</button>
+  currentExercise++;
+  showExercise();
 
-<button onclick="start('imperativo_irregolare')">
-Imperativo irregolari
-</button>
+}
