@@ -1,0 +1,216 @@
+/* ======================
+   BASE
+====================== */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #cfd8d3; /* фон как на картинке */
+}
+
+.container {
+  max-width: 520px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* ======================
+   TITLE
+====================== */
+
+h1 {
+  font-size: 20px;
+  color: #2e5f3e;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ======================
+   MAIN CARD (MENU)
+====================== */
+
+.menu {
+  background: #e7ebe8;
+  padding: 22px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+}
+
+/* A1 / A2 labels */
+
+.menu h2 {
+  font-size: 13px;
+  color: #2e5f3e;
+  margin: 18px 0 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* section titles */
+
+.menu h3 {
+  font-size: 12px;
+  color: #355f47;
+  text-align: left;
+  margin: 14px 0 6px;
+  font-weight: 600;
+}
+
+/* ======================
+   GREEN BUTTONS
+====================== */
+
+.menu button {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 7px;
+  margin-bottom: 7px;
+
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+
+  background-color: #5fa574;
+  transition: 0.2s;
+}
+
+/* лёгкий переход цвета */
+
+.menu button:nth-child(odd) {
+  background-color: #6fb583;
+}
+
+.menu button:nth-child(even) {
+  background-color: #4f9467;
+}
+
+.menu button:hover {
+  filter: brightness(1.08);
+}
+
+/* ======================
+   TRAINER CARD
+====================== */
+
+.card {
+  background: #e7ebe8;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 14px;
+  color: #2e5f3e;
+  font-weight: 500;
+}
+
+/* ======================
+   ANSWERS
+====================== */
+
+.answer {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 7px;
+  margin-top: 7px;
+
+  background-color: #5fa574;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.answer:hover {
+  filter: brightness(1.1);
+}
+
+/* правильный ответ */
+
+.answer.correct {
+  background-color: #3f7f57;
+}
+
+/* неправильный */
+
+.answer.wrong {
+  background-color: #9c4f4f;
+}
+
+/* ======================
+   RESULT
+====================== */
+
+#result {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #2e5f3e;
+}
+
+/* ======================
+   STATS
+====================== */
+
+.stats {
+  font-size: 12px;
+  color: #2e5f3e;
+  margin-bottom: 12px;
+}
+
+/* ======================
+   NEXT BUTTON
+====================== */
+
+.next {
+  border: none;
+  border-radius: 14px;
+  padding: 7px 18px;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+
+  background-color: #5fa574;
+}
+
+.next:hover {
+  filter: brightness(1.1);
+}
+/* ======================
+   MULTIPLE CHOICE STYLE
+   (отличается от меню)
+====================== */
+
+.answer {
+  background-color: #f2f4f3;   /* светло-серый фон */
+  color: #2e5f3e;              /* зелёный текст */
+  border: 2px solid #cfd8d3;   /* мягкая рамка */
+  font-weight: 600;
+}
+
+/* hover — мягкий серо-зелёный */
+
+.answer:hover {
+  background-color: #e3ebe6;
+  border-color: #5fa574;
+  transform: translateY(-1px);
+}
+
+/* правильный ответ */
+
+.answer.correct {
+  background-color: #5fa574;
+  color: white;
+  border-color: #5fa574;
+}
+
+/* неправильный */
+
+.answer.wrong {
+  background-color: #c96a6a;
+  color: white;
+  border-color: #c96a6a;
+}
