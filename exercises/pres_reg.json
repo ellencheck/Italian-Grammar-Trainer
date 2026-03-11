@@ -1,0 +1,74 @@
+[
+{
+"topic":"presente_regolare",
+"exercises":[
+
+{"sentence":"Io ___ con mia sorella ogni sera.","options":["parlo","parli","parla","parliamo","parlate","parlano"],"answer":"parlo"},
+{"sentence":"Tu ___ sempre la verità.","options":["dici","dico","dice","diciamo","dite","dicono"],"answer":"dici"},
+{"sentence":"Lui ___ un libro interessante.","options":["leggo","leggi","legge","leggiamo","leggete","leggono"],"answer":"legge"},
+{"sentence":"Lei ___ il caffè al bar.","options":["bevo","bevi","beve","beviamo","bevete","bevono"],"answer":"beve"},
+{"sentence":"Noi ___ italiano ogni giorno.","options":["studio","studi","studia","studiamo","studiate","studiano"],"answer":"studiamo"},
+{"sentence":"Voi ___ molto veloce.","options":["corro","corri","corre","corriamo","correte","corrono"],"answer":"correte"},
+{"sentence":"Loro ___ al parco la domenica.","options":["passeggio","passeggi","passeggia","passeggiamo","passeggiate","passeggiano"],"answer":"passeggiano"},
+{"sentence":"Io ___ una pizza grande.","options":["mangio","mangi","mangia","mangiamo","mangiate","mangiano"],"answer":"mangio"},
+{"sentence":"Tu ___ la porta lentamente.","options":["apro","apri","apre","apriamo","aprite","aprono"],"answer":"apri"},
+{"sentence":"Lui ___ la musica classica.","options":["ascolto","ascolti","ascolta","ascoltiamo","ascoltate","ascoltano"],"answer":"ascolta"},
+
+{"sentence":"Lei ___ in ufficio alle otto.","options":["arrivo","arrivi","arriva","arriviamo","arrivate","arrivano"],"answer":"arriva"},
+{"sentence":"Noi ___ il treno insieme.","options":["prendo","prendi","prende","prendiamo","prendete","prendono"],"answer":"prendiamo"},
+{"sentence":"Voi ___ la televisione la sera.","options":["guardo","guardi","guarda","guardiamo","guardate","guardano"],"answer":"guardate"},
+{"sentence":"Loro ___ sempre tardi.","options":["parto","parti","parte","partiamo","partite","partono"],"answer":"partono"},
+{"sentence":"Io ___ una lettera lunga.","options":["scrivo","scrivi","scrive","scriviamo","scrivete","scrivono"],"answer":"scrivo"},
+{"sentence":"Tu ___ la bicicletta.","options":["uso","usi","usa","usiamo","usate","usano"],"answer":"usi"},
+{"sentence":"Lui ___ molto bene.","options":["canto","canti","canta","cantiamo","cantate","cantano"],"answer":"canta"},
+{"sentence":"Lei ___ sempre presto.","options":["finisco","finisci","finisce","finiamo","finite","finiscono"],"answer":"finisce"},
+{"sentence":"Noi ___ una casa grande.","options":["cerco","cerchi","cerca","cerchiamo","cercate","cercano"],"answer":"cerchiamo"},
+{"sentence":"Voi ___ il lavoro oggi.","options":["inizio","inizi","inizia","iniziamo","iniziate","iniziano"],"answer":"iniziate"},
+
+{"sentence":"Loro ___ molto forte.","options":["rido","ridi","ride","ridiamo","ridete","ridono"],"answer":"ridono"},
+{"sentence":"Io ___ al telefono.","options":["parlo","parli","parla","parliamo","parlate","parlano"],"answer":"parlo"},
+{"sentence":"Tu ___ il giornale.","options":["leggo","leggi","legge","leggiamo","leggete","leggono"],"answer":"leggi"},
+{"sentence":"Lui ___ la finestra.","options":["chiudo","chiudi","chiude","chiudiamo","chiudete","chiudono"],"answer":"chiude"},
+{"sentence":"Lei ___ la porta.","options":["apro","apri","apre","apriamo","aprite","aprono"],"answer":"apre"},
+{"sentence":"Noi ___ nel mare.","options":["nuoto","nuoti","nuota","nuotiamo","nuotate","nuotano"],"answer":"nuotiamo"},
+{"sentence":"Voi ___ molto piano.","options":["cammino","cammini","cammina","camminiamo","camminate","camminano"],"answer":"camminate"},
+{"sentence":"Loro ___ al ristorante.","options":["ceno","ceni","cena","ceniamo","cenate","cenano"],"answer":"cenano"},
+{"sentence":"Io ___ il computer.","options":["accendo","accendi","accende","accendiamo","accendete","accendono"],"answer":"accendo"},
+{"sentence":"Tu ___ la luce.","options":["spengo","spegni","spegne","spegniamo","spegnete","spengono"],"answer":"spegni"},
+
+{"sentence":"Lui ___ una birra.","options":["bevo","bevi","beve","beviamo","bevete","bevono"],"answer":"beve"},
+{"sentence":"Lei ___ molto velocemente.","options":["scrivo","scrivi","scrive","scriviamo","scrivete","scrivono"],"answer":"scrive"},
+{"sentence":"Noi ___ il progetto.","options":["preparo","prepari","prepara","prepariamo","preparate","preparano"],"answer":"prepariamo"},
+{"sentence":"Voi ___ in città.","options":["vivo","vivi","vive","viviamo","vivete","vivono"],"answer":"vivete"},
+{"sentence":"Loro ___ un cane.","options":["compro","compri","compra","compriamo","comprate","comprano"],"answer":"comprano"},
+{"sentence":"Io ___ il latte.","options":["prendo","prendi","prende","prendiamo","prendete","prendono"],"answer":"prendo"},
+{"sentence":"Tu ___ la strada.","options":["attraverso","attraversi","attraversa","attraversiamo","attraversate","attraversano"],"answer":"attraversi"},
+{"sentence":"Lui ___ la macchina.","options":["guido","guidi","guida","guidiamo","guidate","guidano"],"answer":"guida"},
+{"sentence":"Lei ___ un vestito nuovo.","options":["indosso","indossi","indossa","indossiamo","indossate","indossano"],"answer":"indossa"},
+{"sentence":"Noi ___ molte domande.","options":["faccio","fai","fa","facciamo","fate","fanno"],"answer":"facciamo"},
+
+{"sentence":"Voi ___ al mercato.","options":["vado","vai","va","andiamo","andate","vanno"],"answer":"andate"},
+{"sentence":"Loro ___ la cena.","options":["cucino","cucini","cucina","cuciniamo","cucinate","cucinano"],"answer":"cucinano"},
+{"sentence":"Io ___ molto bene.","options":["dormo","dormi","dorme","dormiamo","dormite","dormono"],"answer":"dormo"},
+{"sentence":"Tu ___ la musica.","options":["sento","senti","sente","sentiamo","sentite","sentono"],"answer":"senti"},
+{"sentence":"Lui ___ una domanda.","options":["faccio","fai","fa","facciamo","fate","fanno"],"answer":"fa"},
+{"sentence":"Lei ___ un film.","options":["guardo","guardi","guarda","guardiamo","guardate","guardano"],"answer":"guarda"},
+{"sentence":"Noi ___ molto.","options":["lavoro","lavori","lavora","lavoriamo","lavorate","lavorano"],"answer":"lavoriamo"},
+{"sentence":"Voi ___ il vino.","options":["assaggio","assaggi","assaggia","assaggiamo","assaggiate","assaggiano"],"answer":"assaggiate"},
+{"sentence":"Loro ___ al telefono.","options":["rispondo","rispondi","risponde","rispondiamo","rispondete","rispondono"],"answer":"rispondono"},
+{"sentence":"Io ___ una canzone.","options":["canto","canti","canta","cantiamo","cantate","cantano"],"answer":"canto"},
+
+{"sentence":"Tu ___ molto.","options":["studio","studi","studia","studiamo","studiate","studiano"],"answer":"studi"},
+{"sentence":"Lui ___ una torta.","options":["preparo","prepari","prepara","prepariamo","preparate","preparano"],"answer":"prepara"},
+{"sentence":"Lei ___ il treno.","options":["aspetto","aspetti","aspetta","aspettiamo","aspettate","aspettano"],"answer":"aspetta"},
+{"sentence":"Noi ___ a casa.","options":["torno","torni","torna","torniamo","tornate","tornano"],"answer":"torniamo"},
+{"sentence":"Voi ___ la porta.","options":["chiudo","chiudi","chiude","chiudiamo","chiudete","chiudono"],"answer":"chiudete"},
+{"sentence":"Loro ___ la lezione.","options":["finisco","finisci","finisce","finiamo","finite","finiscono"],"answer":"finiscono"},
+{"sentence":"Io ___ la strada.","options":["attraverso","attraversi","attraversa","attraversiamo","attraversate","attraversano"],"answer":"attraverso"},
+{"sentence":"Tu ___ la verità.","options":["racconto","racconti","racconta","raccontiamo","raccontate","raccontano"],"answer":"racconti"},
+{"sentence":"Lui ___ molto.","options":["ride","ridi","rido","ridiamo","ridete","ridono"],"answer":"ride"},
+{"sentence":"Lei ___ la finestra.","options":["apre","apro","apri","apriamo","aprite","aprono"],"answer":"apre"}
+
+]
+}
+]
