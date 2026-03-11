@@ -1,0 +1,44 @@
+[
+{
+"topic":"passato_prossimo_regolari",
+"exercises":[
+
+{"sentence":"Io ___ con Maria ieri sera al telefono.","options":["ho parlato","hai parlato","ha parlato","abbiamo parlato","avete parlato","hanno parlato"],"answer":"ho parlato"},
+{"sentence":"Tu ___ un libro interessante la settimana scorsa.","options":["ho comprato","hai comprato","ha comprato","abbiamo comprato","avete comprato","hanno comprato"],"answer":"hai comprato"},
+{"sentence":"Marco ___ molto ieri in ufficio.","options":["ho lavorato","hai lavorato","ha lavorato","abbiamo lavorato","avete lavorato","hanno lavorato"],"answer":"ha lavorato"},
+{"sentence":"Noi ___ a lungo durante il viaggio in treno.","options":["ho parlato","hai parlato","ha parlato","abbiamo parlato","avete parlato","hanno parlato"],"answer":"abbiamo parlato"},
+{"sentence":"Voi ___ la città due giorni fa.","options":["ho visitato","hai visitato","ha visitato","abbiamo visitato","avete visitato","hanno visitato"],"answer":"avete visitato"},
+{"sentence":"Loro ___ fino a mezzanotte ieri.","options":["ho lavorato","hai lavorato","ha lavorato","abbiamo lavorato","avete lavorato","hanno lavorato"],"answer":"hanno lavorato"},
+
+{"sentence":"Io ___ un film molto interessante ieri sera.","options":["ho guardato","hai guardato","ha guardato","abbiamo guardato","avete guardato","hanno guardato"],"answer":"ho guardato"},
+{"sentence":"Tu ___ con il professore dopo la lezione.","options":["ho parlato","hai parlato","ha parlato","abbiamo parlato","avete parlato","hanno parlato"],"answer":"hai parlato"},
+{"sentence":"Anna ___ molto per l'esame ieri.","options":["ho studiato","hai studiato","ha studiato","abbiamo studiato","avete studiato","hanno studiato"],"answer":"ha studiato"},
+{"sentence":"Noi ___ una pizza grande al ristorante.","options":["ho mangiato","hai mangiato","ha mangiato","abbiamo mangiato","avete mangiato","hanno mangiato"],"answer":"abbiamo mangiato"},
+{"sentence":"Voi ___ molte foto durante il viaggio.","options":["ho scattato","hai scattato","ha scattato","abbiamo scattato","avete scattato","hanno scattato"],"answer":"avete scattato"},
+{"sentence":"Loro ___ tutta la notte alla festa.","options":["ho ballato","hai ballato","ha ballato","abbiamo ballato","avete ballato","hanno ballato"],"answer":"hanno ballato"},
+
+{"sentence":"Io ___ il giornale stamattina al bar.","options":["ho letto","hai letto","ha letto","abbiamo letto","avete letto","hanno letto"],"answer":"ho letto"},
+{"sentence":"Tu ___ la porta prima di uscire.","options":["ho chiuso","hai chiuso","ha chiuso","abbiamo chiuso","avete chiuso","hanno chiuso"],"answer":"hai chiuso"},
+{"sentence":"Marco ___ molto caffè oggi.","options":["ho bevuto","hai bevuto","ha bevuto","abbiamo bevuto","avete bevuto","hanno bevuto"],"answer":"ha bevuto"},
+{"sentence":"Noi ___ una lunga email ieri sera.","options":["ho scritto","hai scritto","ha scritto","abbiamo scritto","avete scritto","hanno scritto"],"answer":"abbiamo scritto"},
+{"sentence":"Voi ___ il museo domenica.","options":["ho visitato","hai visitato","ha visitato","abbiamo visitato","avete visitato","hanno visitato"],"answer":"avete visitato"},
+{"sentence":"Loro ___ la risposta subito.","options":["ho trovato","hai trovato","ha trovato","abbiamo trovato","avete trovato","hanno trovato"],"answer":"hanno trovato"},
+
+{"sentence":"Io ___ una nuova macchina l'anno scorso.","options":["ho comprato","hai comprato","ha comprato","abbiamo comprato","avete comprato","hanno comprato"],"answer":"ho comprato"},
+{"sentence":"Tu ___ molto durante la riunione.","options":["ho parlato","hai parlato","ha parlato","abbiamo parlato","avete parlato","hanno parlato"],"answer":"hai parlato"},
+{"sentence":"Anna ___ il progetto ieri pomeriggio.","options":["ho finito","hai finito","ha finito","abbiamo finito","avete finito","hanno finito"],"answer":"ha finito"},
+{"sentence":"Noi ___ molto bene insieme.","options":["ho lavorato","hai lavorato","ha lavorato","abbiamo lavorato","avete lavorato","hanno lavorato"],"answer":"abbiamo lavorato"},
+{"sentence":"Voi ___ finalmente la verità.","options":["ho capito","hai capito","ha capito","abbiamo capito","avete capito","hanno capito"],"answer":"avete capito"},
+{"sentence":"Loro ___ la casa molto velocemente.","options":["ho pulito","hai pulito","ha pulito","abbiamo pulito","avete pulito","hanno pulito"],"answer":"hanno pulito"},
+
+{"sentence":"Io ___ il computer ieri sera.","options":["ho usato","hai usato","ha usato","abbiamo usato","avete usato","hanno usato"],"answer":"ho usato"},
+{"sentence":"Tu ___ una domanda importante.","options":["ho fatto","hai fatto","ha fatto","abbiamo fatto","avete fatto","hanno fatto"],"answer":"hai fatto"},
+{"sentence":"Marco ___ il treno stamattina.","options":["ho preso","hai preso","ha preso","abbiamo preso","avete preso","hanno preso"],"answer":"ha preso"},
+{"sentence":"Noi ___ molto durante la vacanza.","options":["ho camminato","hai camminato","ha camminato","abbiamo camminato","avete camminato","hanno camminato"],"answer":"abbiamo camminato"},
+{"sentence":"Voi ___ il nuovo ristorante ieri.","options":["ho provato","hai provato","ha provato","abbiamo provato","avete provato","hanno provato"],"answer":"avete provato"},
+{"sentence":"Loro ___ molte domande al professore.","options":["ho fatto","hai fatto","ha fatto","abbiamo fatto","avete fatto","hanno fatto"],"answer":"hanno fatto"}
+
+]
+}
+]
+```
