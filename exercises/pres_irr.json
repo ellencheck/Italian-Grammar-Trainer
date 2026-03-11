@@ -1,0 +1,71 @@
+[
+{
+"topic":"presente_irregolare",
+"exercises":[
+
+{"sentence":"Io ___ a casa.","options":["sono","sei","è","siamo","siete","sono"],"answer":"sono"},
+{"sentence":"Tu ___ molto stanco.","options":["sono","sei","è","siamo","siete","sono"],"answer":"sei"},
+{"sentence":"Lui ___ felice.","options":["sono","sei","è","siamo","siete","sono"],"answer":"è"},
+{"sentence":"Noi ___ amici.","options":["sono","sei","è","siamo","siete","sono"],"answer":"siamo"},
+{"sentence":"Voi ___ pronti.","options":["sono","sei","è","siamo","siete","sono"],"answer":"siete"},
+{"sentence":"Loro ___ a scuola.","options":["sono","sei","è","siamo","siete","sono"],"answer":"sono"},
+
+{"sentence":"Io ___ fame.","options":["ho","hai","ha","abbiamo","avete","hanno"],"answer":"ho"},
+{"sentence":"Tu ___ ragione.","options":["ho","hai","ha","abbiamo","avete","hanno"],"answer":"hai"},
+{"sentence":"Lui ___ un cane.","options":["ho","hai","ha","abbiamo","avete","hanno"],"answer":"ha"},
+{"sentence":"Noi ___ tempo.","options":["ho","hai","ha","abbiamo","avete","hanno"],"answer":"abbiamo"},
+{"sentence":"Voi ___ molti libri.","options":["ho","hai","ha","abbiamo","avete","hanno"],"answer":"avete"},
+{"sentence":"Loro ___ fame.","options":["ho","hai","ha","abbiamo","avete","hanno"],"answer":"hanno"},
+
+{"sentence":"Io ___ a Roma.","options":["vado","vai","va","andiamo","andate","vanno"],"answer":"vado"},
+{"sentence":"Tu ___ al lavoro.","options":["vado","vai","va","andiamo","andate","vanno"],"answer":"vai"},
+{"sentence":"Lui ___ al bar.","options":["vado","vai","va","andiamo","andate","vanno"],"answer":"va"},
+{"sentence":"Noi ___ a scuola.","options":["vado","vai","va","andiamo","andate","vanno"],"answer":"andiamo"},
+{"sentence":"Voi ___ al mare.","options":["vado","vai","va","andiamo","andate","vanno"],"answer":"andate"},
+{"sentence":"Loro ___ al cinema.","options":["vado","vai","va","andiamo","andate","vanno"],"answer":"vanno"},
+
+{"sentence":"Io ___ molto.","options":["faccio","fai","fa","facciamo","fate","fanno"],"answer":"faccio"},
+{"sentence":"Tu ___ una torta.","options":["faccio","fai","fa","facciamo","fate","fanno"],"answer":"fai"},
+{"sentence":"Lui ___ sport.","options":["faccio","fai","fa","facciamo","fate","fanno"],"answer":"fa"},
+{"sentence":"Noi ___ un progetto.","options":["faccio","fai","fa","facciamo","fate","fanno"],"answer":"facciamo"},
+{"sentence":"Voi ___ rumore.","options":["faccio","fai","fa","facciamo","fate","fanno"],"answer":"fate"},
+{"sentence":"Loro ___ festa.","options":["faccio","fai","fa","facciamo","fate","fanno"],"answer":"fanno"},
+
+{"sentence":"Io ___ la verità.","options":["dico","dici","dice","diciamo","dite","dicono"],"answer":"dico"},
+{"sentence":"Tu ___ tutto.","options":["dico","dici","dice","diciamo","dite","dicono"],"answer":"dici"},
+{"sentence":"Lui ___ una parola.","options":["dico","dici","dice","diciamo","dite","dicono"],"answer":"dice"},
+{"sentence":"Noi ___ la risposta.","options":["dico","dici","dice","diciamo","dite","dicono"],"answer":"diciamo"},
+{"sentence":"Voi ___ sempre sì.","options":["dico","dici","dice","diciamo","dite","dicono"],"answer":"dite"},
+{"sentence":"Loro ___ bugie.","options":["dico","dici","dice","diciamo","dite","dicono"],"answer":"dicono"},
+
+{"sentence":"Io ___ il giornale.","options":["leggo","leggi","legge","leggiamo","leggete","leggono"],"answer":"leggo"},
+{"sentence":"Tu ___ molto.","options":["leggo","leggi","legge","leggiamo","leggete","leggono"],"answer":"leggi"},
+{"sentence":"Lui ___ un libro.","options":["leggo","leggi","legge","leggiamo","leggete","leggono"],"answer":"legge"},
+{"sentence":"Noi ___ insieme.","options":["leggo","leggi","legge","leggiamo","leggete","leggono"],"answer":"leggiamo"},
+{"sentence":"Voi ___ ad alta voce.","options":["leggo","leggi","legge","leggiamo","leggete","leggono"],"answer":"leggete"},
+{"sentence":"Loro ___ molto.","options":["leggo","leggi","legge","leggiamo","leggete","leggono"],"answer":"leggono"},
+
+{"sentence":"Io ___ vino.","options":["bevo","bevi","beve","beviamo","bevete","bevono"],"answer":"bevo"},
+{"sentence":"Tu ___ acqua.","options":["bevo","bevi","beve","beviamo","bevete","bevono"],"answer":"bevi"},
+{"sentence":"Lui ___ caffè.","options":["bevo","bevi","beve","beviamo","bevete","bevono"],"answer":"beve"},
+{"sentence":"Noi ___ birra.","options":["bevo","bevi","beve","beviamo","bevete","bevono"],"answer":"beviamo"},
+{"sentence":"Voi ___ molto.","options":["bevo","bevi","beve","beviamo","bevete","bevono"],"answer":"bevete"},
+{"sentence":"Loro ___ latte.","options":["bevo","bevi","beve","beviamo","bevete","bevono"],"answer":"bevono"},
+
+{"sentence":"Io ___ la porta.","options":["apro","apri","apre","apriamo","aprite","aprono"],"answer":"apro"},
+{"sentence":"Tu ___ la finestra.","options":["apro","apri","apre","apriamo","aprite","aprono"],"answer":"apri"},
+{"sentence":"Lui ___ il negozio.","options":["apro","apri","apre","apriamo","aprite","aprono"],"answer":"apre"},
+{"sentence":"Noi ___ il regalo.","options":["apro","apri","apre","apriamo","aprite","aprono"],"answer":"apriamo"},
+{"sentence":"Voi ___ il libro.","options":["apro","apri","apre","apriamo","aprite","aprono"],"answer":"aprite"},
+{"sentence":"Loro ___ le porte.","options":["apro","apri","apre","apriamo","aprite","aprono"],"answer":"aprono"},
+
+{"sentence":"Io ___ tardi.","options":["esco","esci","esce","usciamo","uscite","escono"],"answer":"esco"},
+{"sentence":"Tu ___ presto.","options":["esco","esci","esce","usciamo","uscite","escono"],"answer":"esci"},
+{"sentence":"Lui ___ di casa.","options":["esco","esci","esce","usciamo","uscite","escono"],"answer":"esce"},
+{"sentence":"Noi ___ insieme.","options":["esco","esci","esce","usciamo","uscite","escono"],"answer":"usciamo"},
+{"sentence":"Voi ___ stasera.","options":["esco","esci","esce","usciamo","uscite","escono"],"answer":"uscite"},
+{"sentence":"Loro ___ subito.","options":["esco","esci","esce","usciamo","uscite","escono"],"answer":"escono"}
+
+]
+}
+]
