@@ -2,102 +2,34 @@
 // STATE
 // ======================
 
-let exercises = [];   // ✅ FIX 1
+let exercises = [];
 let filtered = [];
 let currentExercise = null;
 let good = 0;
 let bad = 0;
 
-let exercisesLoaded = false;
-let loadingPromise = null;
+let loaded = false;
 
-
-// ======================
-// TOPIC MAP
-// ======================
-
-const topicMap = {
-
-  // ARTICOLI
-  art_def: "articoli_determinativi",
-  art_indef: "articoli_indeterminativi",
-
-  // PRESENTE
-  pres_irr: "presente_verbi_irregolari",
-  riflessivi: "verbi_riflessivi_presente",
-
-  // PREPOSIZIONI
-  prep: "preposizioni_semplici",
-
-  // IMPERFETTO
-  imp_reg: "imperfetto_regolare",
-  imp_irr: "imperfetto_irregolare",
-
-  // PASSATO PROSSIMO
-  pp_reg: "passato_prossimo_regolare",
-  pp_irr: "passato_prossimo_irregolare",
-
-  // FUTURO
-  fut_reg: "futuro_semplice_regolare",
-  fut_irr: "futuro_semplice_irregolare",
-
-  // IMPERATIVO
-  impv_reg: "imperativo_regolare",
-  impv_irr: "imperativo_irregolare",
-
-  // 👇 ДОБАВЛЕННЫЕ (которые раньше отсутствовали)
-  genere: "genere",
-  possessivi: "possessivi",
-  art_prep: "preposizioni_articolate",
-  pres_reg: "presente_regolari"
-};
 
 // ======================
 // LOAD JSON
 // ======================
 
-async function loadExercises() {
+async function loadExercises(){
 
-  if (exercisesLoaded) return exercises;
-  if (loadingPromise) return loadingPromise;
+  if(loaded) return;
 
-  loadingPromise = (async () => {
+  const res = await fetch("./exercises.json", {
+    cache: "no-store"
+  });
 
-    try {
+  exercises = await res.json();
 
-      const res = await fetch("./exercises.json", {
-        cache: "no-store"
-      });
+  loaded = true;
 
-      if (!res.ok) {
-        throw new Error("JSON not found: " + res.status);
-      }
-
-      const data = await res.json();
-
-      // ✅ FIX 2 — JSON должен быть массивом
-      if (!Array.isArray(data)) {
-        throw new Error("Invalid JSON format");
-      }
-
-      exercises = data;
-      exercisesLoaded = true;
-
-      console.log("✅ Exercises loaded:", exercises.length);
-
-      return exercises;
-
-    } catch (err) {
-
-      console.error("LOAD ERROR:", err);
-
-      document.getElementById("question").textContent =
-        "Ошибка загрузки упражнений";
-    }
-
-  })();
-
-  return loadingPromise;
+  console.log("✅ Loaded topics:",
+    exercises.map(e => e.topic)
+  );
 }
 
 
@@ -110,7 +42,7 @@ function random(arr){
 }
 
 function shuffle(arr){
-  return [...arr].sort(() => Math.random() - 0.5);
+  return [...arr].sort(()=>Math.random()-0.5);
 }
 
 
@@ -122,22 +54,15 @@ async function start(topic){
 
   await loadExercises();
 
-  const realTopic = topicMap[topic] || topic;
+  const group = exercises.find(e => e.topic === topic);
 
-  // ✅ FIX 3 — правильный поиск темы
-  const group = exercises.find(
-    t => t.topic === realTopic
-  );
-
-  // ✅ FIX 4 — проверяем только существование
   if(!group){
     document.getElementById("question").textContent =
       "Упражнения не найдены";
-    document.getElementById("answers").innerHTML = "";
+    document.getElementById("answers").innerHTML="";
     return;
   }
 
-  // ✅ FIX 5 — берём массив упражнений
   filtered = group.exercises;
 
   generateExercise();
@@ -145,7 +70,7 @@ async function start(topic){
 
 
 // ======================
-// GENERATE EXERCISE
+// GENERATE
 // ======================
 
 function generateExercise(){
@@ -167,19 +92,19 @@ function generateExercise(){
 
 function renderExercise(sentence, options){
 
-  const q = document.getElementById("question");
-  const a = document.getElementById("answers");
+  const q=document.getElementById("question");
+  const a=document.getElementById("answers");
 
-  q.textContent = sentence;
-  a.innerHTML = "";
+  q.textContent=sentence;
+  a.innerHTML="";
 
-  options.forEach(opt => {
+  options.forEach(opt=>{
 
-    const btn = document.createElement("button");
-    btn.className = "answer";
-    btn.textContent = opt;
+    const btn=document.createElement("button");
+    btn.className="answer";
+    btn.textContent=opt;
 
-    btn.onclick = () => checkAnswer(opt);
+    btn.onclick=()=>checkAnswer(opt);
 
     a.appendChild(btn);
   });
@@ -192,24 +117,24 @@ function renderExercise(sentence, options){
 
 function checkAnswer(choice){
 
-  if(choice === currentExercise.answer){
+  if(choice===currentExercise.answer){
     good++;
-    document.getElementById("good").textContent = good;
-    document.getElementById("result").textContent = "✅ Правильно";
+    document.getElementById("good").textContent=good;
+    document.getElementById("result").textContent="✅ Правильно";
   } else {
     bad++;
-    document.getElementById("bad").textContent = bad;
-    document.getElementById("result").textContent =
-      "❌ Неправильно. Правильный ответ: " + currentExercise.answer;
+    document.getElementById("bad").textContent=bad;
+    document.getElementById("result").textContent=
+      "❌ Неправильно. Правильный ответ: "
+      + currentExercise.answer;
   }
 }
 
 
 // ======================
-// NEXT BUTTON
+// NEXT
 // ======================
 
 function generate(){
   generateExercise();
 }
-
