@@ -36,8 +36,7 @@ function showExercise() {
   const resultDiv = document.getElementById("result");
 
   // Показываем вопрос
-  questionDiv.innerHTML = ex.sentence;
-  questionDiv.style.fontSize = "60px"; // крупный шрифт
+  questionDiv.textContent = ex.sentence;
 
   // Озвучка
   if ('speechSynthesis' in window) {
@@ -48,20 +47,12 @@ function showExercise() {
 
   // Очистка ответов
   answersDiv.innerHTML = "";
-  answersDiv.style.display = "flex";
-  answersDiv.style.flexDirection = "column";
-  answersDiv.style.alignItems = "center";
 
   // Создаём кнопки для вариантов
   ex.options.forEach(option => {
     const button = document.createElement("button");
     button.textContent = option;
-    button.style.fontSize = "50px"; // крупные кнопки
-    button.style.padding = "20px";
-    button.style.margin = "10px";
-    button.style.width = "80%";
-    button.style.borderRadius = "15px";
-    button.style.cursor = "pointer";
+    button.classList.add("answer"); // теперь оформление берётся из CSS
 
     button.onclick = function () {
       checkAnswer(option, button);
@@ -70,7 +61,8 @@ function showExercise() {
     answersDiv.appendChild(button);
   });
 
-  resultDiv.innerHTML = `✔ Правильно: ${correctCount} | ✘ Неправильно: ${wrongCount}`;
+  // Обновляем счёт
+  resultDiv.textContent = `✔ Правильно: ${correctCount} | ✘ Неправильно: ${wrongCount}`;
 }
 
 function checkAnswer(answer, buttonClicked) {
@@ -78,26 +70,26 @@ function checkAnswer(answer, buttonClicked) {
   const correct = ex.answer;
   const buttons = document.getElementById("answers").children;
 
-  // Подсвечиваем кнопки
+  // Подсвечиваем кнопки через CSS классы
   for (let btn of buttons) {
-    if (btn.textContent === correct) {
-      btn.style.backgroundColor = "#5fa574"; // зелёный
-      btn.style.color = "white";
-    } else if (btn === buttonClicked && answer !== correct) {
-      btn.style.backgroundColor = "#c96a6a"; // красный
-      btn.style.color = "white";
-    } else {
-      btn.style.backgroundColor = "#f2f4f3"; // нейтральный
-      btn.style.color = "#2e5f3e";
-    }
     btn.disabled = true; // нельзя нажимать повторно
+
+    if (btn.textContent === correct) {
+      btn.classList.add("correct");
+      btn.classList.remove("wrong");
+    } else if (btn === buttonClicked && answer !== correct) {
+      btn.classList.add("wrong");
+      btn.classList.remove("correct");
+    } else {
+      btn.classList.remove("correct", "wrong");
+    }
   }
 
   // Обновляем счёт
   if (answer === correct) correctCount++;
   else wrongCount++;
 
-  document.getElementById("result").innerHTML = `✔ Правильно: ${correctCount} | ✘ Неправильно: ${wrongCount}`;
+  document.getElementById("result").textContent = `✔ Правильно: ${correctCount} | ✘ Неправильно: ${wrongCount}`;
 
   // Переход к следующему через 1,2 секунды
   setTimeout(() => {
