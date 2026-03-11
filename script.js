@@ -110,8 +110,10 @@ async function start(topic){
 
   const realTopic = topicMap[topic] || topic;
 
-  const group = exercises.find(t => t.topic === realTopic);
-
+ const group = exercises.find(
+  t => t.topic.trim().toLowerCase() === realTopic.trim().toLowerCase()
+);
+  
   if(!group){
     document.getElementById("question").textContent =
       "Упражнения не найдены";
@@ -193,3 +195,4 @@ function checkAnswer(choice){
 function generate(){
   generateExercise();
 }
+
