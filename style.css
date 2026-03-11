@@ -2,16 +2,30 @@
    BASE
 ====================== */
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;             /* чтобы весь экран занимал */
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #cfd8d3; /* фон как на картинке */
+  background-color: #cfd8d3;
+  overflow-x: hidden;       /* запрещаем горизонтальный скролл */
 }
 
+body {
+  display: flex;
+  justify-content: center;  /* центрируем по горизонтали */
+}
+
+/* контейнер теперь растягивается на весь экран, скролл по вертикали */
 .container {
+  width: 100%;
   max-width: 520px;
-  margin: 30px auto;
+  min-height: 100vh;        /* минимум высота = высоте экрана */
+  margin: 0;
+  padding: 30px 15px;
+  box-sizing: border-box;
   text-align: center;
+  overflow-y: auto;         /* вертикальный скролл если контент большой */
 }
 
 /* ======================
@@ -117,28 +131,35 @@ h1 {
   padding: 7px;
   margin-top: 7px;
 
-  background-color: #5fa574;
-  color: white;
+  background-color: #f2f4f3; /* светло-серый фон */
+  color: #2e5f3e;
+  border: 2px solid #cfd8d3;
+  font-weight: 600;
   font-size: 12px;
   cursor: pointer;
 
   transition: 0.2s;
 }
 
+/* hover — мягкий серо-зелёный */
 .answer:hover {
-  filter: brightness(1.1);
+  background-color: #e3ebe6;
+  border-color: #5fa574;
+  transform: translateY(-1px);
 }
 
 /* правильный ответ */
-
 .answer.correct {
-  background-color: #3f7f57;
+  background-color: #5fa574;
+  color: white;
+  border-color: #5fa574;
 }
 
 /* неправильный */
-
 .answer.wrong {
-  background-color: #9c4f4f;
+  background-color: #c96a6a;
+  color: white;
+  border-color: #c96a6a;
 }
 
 /* ======================
@@ -178,39 +199,4 @@ h1 {
 
 .next:hover {
   filter: brightness(1.1);
-}
-/* ======================
-   MULTIPLE CHOICE STYLE
-   (отличается от меню)
-====================== */
-
-.answer {
-  background-color: #f2f4f3;   /* светло-серый фон */
-  color: #2e5f3e;              /* зелёный текст */
-  border: 2px solid #cfd8d3;   /* мягкая рамка */
-  font-weight: 600;
-}
-
-/* hover — мягкий серо-зелёный */
-
-.answer:hover {
-  background-color: #e3ebe6;
-  border-color: #5fa574;
-  transform: translateY(-1px);
-}
-
-/* правильный ответ */
-
-.answer.correct {
-  background-color: #5fa574;
-  color: white;
-  border-color: #5fa574;
-}
-
-/* неправильный */
-
-.answer.wrong {
-  background-color: #c96a6a;
-  color: white;
-  border-color: #c96a6a;
 }
