@@ -1,3 +1,7 @@
+// ======================
+// STATE
+// ======================
+
 let exercises = [];
 let filtered = [];
 let currentExercise = null;
@@ -7,7 +11,11 @@ let bad = 0;
 let exercisesLoaded = false;
 let loadingPromise = null;
 
-// соответствие кнопок HTML и тем JSON
+
+// ======================
+// TOPIC MAP
+// ======================
+
 const topicMap = {
   art_def: "articoli_determinativi",
   art_indef: "articoli_indeterminativi",
@@ -28,18 +36,24 @@ const topicMap = {
   impv_irr: "imperativo_irregolari"
 };
 
-// ✅ НАДЁЖНАЯ загрузка JSON
-async function loadExercises(){
+
+// ======================
+// LOAD JSON (FIXED)
+// ======================
+
+async function loadExercises() {
 
   if (exercisesLoaded) return exercises;
   if (loadingPromise) return loadingPromise;
 
   loadingPromise = (async () => {
+
     try {
 
-      const res = await fetch("./exercises.json", {
-        cache: "no-store"
-      });
+      const res = await fetch(
+        "/Italian-Grammar-Trainer/exercises.json",
+        { cache: "no-store" }
+      );
 
       if (!res.ok) {
         throw new Error("JSON not found: " + res.status);
@@ -48,7 +62,7 @@ async function loadExercises(){
       const data = await res.json();
 
       if (!Array.isArray(data)) {
-        throw new Error("JSON format invalid");
+        throw new Error("Invalid JSON format");
       }
 
       exercises = data;
@@ -59,23 +73,36 @@ async function loadExercises(){
       return exercises;
 
     } catch (err) {
-      console.error("❌ LOAD ERROR:", err);
+
+      console.error("LOAD ERROR:", err);
 
       document.getElementById("question").textContent =
-        "Ошибка загрузки упражнений (JSON)";
+        "Ошибка загрузки упражнений";
+
     }
+
   })();
 
   return loadingPromise;
 }
+
+
+// ======================
+// HELPERS
+// ======================
 
 function random(arr){
   return arr[Math.floor(Math.random()*arr.length)];
 }
 
 function shuffle(arr){
-  return [...arr].sort(()=>Math.random()-0.5);
+  return [...arr].sort(() => Math.random() - 0.5);
 }
+
+
+// ======================
+// START TOPIC
+// ======================
 
 async function start(topic){
 
@@ -97,6 +124,11 @@ async function start(topic){
   generateExercise();
 }
 
+
+// ======================
+// GENERATE EXERCISE
+// ======================
+
 function generateExercise(){
 
   if(!filtered.length) return;
@@ -108,6 +140,11 @@ function generateExercise(){
     shuffle(currentExercise.options)
   );
 }
+
+
+// ======================
+// RENDER
+// ======================
 
 function renderExercise(sentence, options){
 
@@ -129,6 +166,11 @@ function renderExercise(sentence, options){
   });
 }
 
+
+// ======================
+// CHECK ANSWER
+// ======================
+
 function checkAnswer(choice){
 
   if(choice === currentExercise.answer){
@@ -143,34 +185,11 @@ function checkAnswer(choice){
   }
 }
 
+
+// ======================
+// NEXT BUTTON
+// ======================
+
 function generate(){
   generateExercise();
-}
-async function loadExercises() {
-
-  try {
-
-    const res = await fetch(
-      "/Italian-Grammar-Trainer/exercises.json",
-      { cache: "no-store" }
-    );
-
-    const text = await res.text();
-
-    // проверяем что пришёл JSON
-    if (text.startsWith("<")) {
-      throw new Error("Получен HTML вместо JSON");
-    }
-
-    exercises = JSON.parse(text);
-
-    console.log("✅ JSON loaded");
-
-  } catch (e) {
-
-    console.error(e);
-
-    document.getElementById("question").textContent =
-      "Ошибка загрузки упражнений";
-  }
 }
