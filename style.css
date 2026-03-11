@@ -12,20 +12,19 @@ html, body {
 }
 
 body {
-  display: flex;
-  justify-content: center;
+  /* удалили центрирование */
+  display: block;
 }
 
-/* контейнер теперь растягивается на весь экран, скролл по вертикали */
+/* контейнер теперь растягивается на весь экран ноутбука, скролл по вертикали */
 .container {
-  width: 100%;
-  max-width: 720px;          /* увеличили ширину для ноутбуков */
-  min-height: 100vh;
+  width: 100%;              /* занимает всю ширину экрана */
+  min-height: 100vh;        /* минимум высота = высоте экрана */
   margin: 0;
-  padding: 40px 20px;        /* увеличили padding */
+  padding: 40px 20px;       /* оставляем padding */
   box-sizing: border-box;
   text-align: center;
-  overflow-y: auto;
+  overflow-y: auto;         /* вертикальный скролл если контент большой */
 }
 
 /* ======================
@@ -33,7 +32,7 @@ body {
 ====================== */
 
 h1 {
-  font-size: 26px;            /* увеличен шрифт */
+  font-size: 26px;          
   color: #2e5f3e;
   font-weight: 600;
   margin-bottom: 25px;
@@ -45,7 +44,7 @@ h1 {
 
 .menu {
   background: #e7ebe8;
-  padding: 28px;              /* увеличили padding */
+  padding: 28px;              
   border-radius: 14px;
   margin-bottom: 30px;
 }
@@ -53,7 +52,7 @@ h1 {
 /* A1 / A2 labels */
 
 .menu h2 {
-  font-size: 16px;            /* увеличен шрифт */
+  font-size: 16px;            
   color: #2e5f3e;
   margin: 20px 0 10px;
   font-weight: 600;
@@ -63,7 +62,7 @@ h1 {
 /* section titles */
 
 .menu h3 {
-  font-size: 14px;            /* увеличен шрифт */
+  font-size: 14px;            
   color: #355f47;
   text-align: left;
   margin: 16px 0 8px;
@@ -78,18 +77,16 @@ h1 {
   width: 100%;
   border: none;
   border-radius: 14px;
-  padding: 12px;              /* увеличен padding */
+  padding: 12px;              
   margin-bottom: 10px;
 
-  font-size: 14px;            /* увеличен шрифт */
+  font-size: 14px;            
   color: white;
   cursor: pointer;
 
   background-color: #5fa574;
   transition: 0.2s;
 }
-
-/* лёгкий переход цвета */
 
 .menu button:nth-child(odd) {
   background-color: #6fb583;
@@ -110,12 +107,12 @@ h1 {
 .card {
   background: #e7ebe8;
   border-radius: 14px;
-  padding: 28px;              /* увеличен padding */
+  padding: 28px;              
   margin-bottom: 20px;
 }
 
 .card h2 {
-  font-size: 16px;            /* увеличен шрифт */
+  font-size: 16px;            
   color: #2e5f3e;
   font-weight: 500;
 }
@@ -128,34 +125,31 @@ h1 {
   width: 100%;
   border: none;
   border-radius: 14px;
-  padding: 12px;              /* увеличен padding */
+  padding: 12px;              
   margin-top: 10px;
 
   background-color: #f2f4f3;
   color: #2e5f3e;
   border: 2px solid #cfd8d3;
   font-weight: 600;
-  font-size: 14px;            /* увеличен шрифт */
+  font-size: 14px;            
   cursor: pointer;
 
   transition: 0.2s;
 }
 
-/* hover — мягкий серо-зелёный */
 .answer:hover {
   background-color: #e3ebe6;
   border-color: #5fa574;
   transform: translateY(-1px);
 }
 
-/* правильный ответ */
 .answer.correct {
   background-color: #5fa574;
   color: white;
   border-color: #5fa574;
 }
 
-/* неправильный */
 .answer.wrong {
   background-color: #c96a6a;
   color: white;
@@ -168,7 +162,7 @@ h1 {
 
 #result {
   margin-top: 12px;
-  font-size: 14px;            /* увеличен шрифт */
+  font-size: 14px;            
   color: #2e5f3e;
 }
 
@@ -177,7 +171,7 @@ h1 {
 ====================== */
 
 .stats {
-  font-size: 14px;            /* увеличен шрифт */
+  font-size: 14px;            
   color: #2e5f3e;
   margin-bottom: 15px;
 }
@@ -189,8 +183,8 @@ h1 {
 .next {
   border: none;
   border-radius: 14px;
-  padding: 10px 22px;         /* увеличен padding */
-  font-size: 14px;             /* увеличен шрифт */
+  padding: 10px 22px;         
+  font-size: 14px;             
   color: white;
   cursor: pointer;
 
