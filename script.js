@@ -4,6 +4,9 @@ let currentExercise = null;
 let good = 0;
 let bad = 0;
 
+let exercisesLoaded = false;
+let loadingPromise = null;
+
 // соответствие кнопок HTML и тем JSON
 const topicMap = {
   art_def: "articoli_determinativi",
@@ -25,9 +28,45 @@ const topicMap = {
   impv_irr: "imperativo_irregolari"
 };
 
+// ✅ НАДЁЖНАЯ загрузка JSON
 async function loadExercises(){
-  const res = await fetch("./exercises.json?v=" + Date.now())
-  exercises = await res.json();
+
+  if (exercisesLoaded) return exercises;
+  if (loadingPromise) return loadingPromise;
+
+  loadingPromise = (async () => {
+    try {
+
+      const res = await fetch("./exercises.json", {
+        cache: "no-store"
+      });
+
+      if (!res.ok) {
+        throw new Error("JSON not found: " + res.status);
+      }
+
+      const data = await res.json();
+
+      if (!Array.isArray(data)) {
+        throw new Error("JSON format invalid");
+      }
+
+      exercises = data;
+      exercisesLoaded = true;
+
+      console.log("✅ Exercises loaded:", exercises.length);
+
+      return exercises;
+
+    } catch (err) {
+      console.error("❌ LOAD ERROR:", err);
+
+      document.getElementById("question").textContent =
+        "Ошибка загрузки упражнений (JSON)";
+    }
+  })();
+
+  return loadingPromise;
 }
 
 function random(arr){
@@ -40,16 +79,15 @@ function shuffle(arr){
 
 async function start(topic){
 
-  if(!exercises.length){
-    await loadExercises();
-  }
+  await loadExercises();
 
   const realTopic = topicMap[topic] || topic;
 
   const group = exercises.find(t => t.topic === realTopic);
 
   if(!group){
-    document.getElementById("question").textContent = "Упражнения не найдены";
+    document.getElementById("question").textContent =
+      "Упражнения не найдены";
     document.getElementById("answers").innerHTML = "";
     return;
   }
@@ -88,36 +126,23 @@ function renderExercise(sentence, options){
     btn.onclick = () => checkAnswer(opt);
 
     a.appendChild(btn);
-
   });
-
 }
 
 function checkAnswer(choice){
 
   if(choice === currentExercise.answer){
-
     good++;
     document.getElementById("good").textContent = good;
     document.getElementById("result").textContent = "✅ Правильно";
-
   } else {
-
     bad++;
     document.getElementById("bad").textContent = bad;
     document.getElementById("result").textContent =
       "❌ Неправильно. Правильный ответ: " + currentExercise.answer;
-
   }
-
 }
 
 function generate(){
   generateExercise();
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-  loadExercises();
-});
-
-
