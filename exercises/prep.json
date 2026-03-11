@@ -1,0 +1,63 @@
+```json
+[
+{
+"topic":"preposizioni_semplici",
+"exercises":[
+{"sentence":"Vengo ___ Roma.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"da"},
+{"sentence":"Vado ___ scuola.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
+{"sentence":"Il libro è ___ Marco.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"di"},
+{"sentence":"Studio ___ biblioteca.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"in"},
+{"sentence":"Parlo ___ Maria.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"con"},
+{"sentence":"Il gatto è ___ tavolo.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"su"},
+{"sentence":"Parto ___ lavoro.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"per"},
+{"sentence":"La farmacia è ___ il bar e la banca.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"tra"},
+{"sentence":"Ci vediamo ___ due ore.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"fra"},
+{"sentence":"Sono ___ Milano.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
+
+{"sentence":"Vengo ___ ufficio.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"da"},
+{"sentence":"Il bicchiere è ___ vetro.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"di"},
+{"sentence":"Metto il libro ___ tavolo.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"su"},
+{"sentence":"Vivo ___ Italia.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"in"},
+{"sentence":"Esco ___ amici.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"con"},
+{"sentence":"Parto ___ Roma.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"per"},
+{"sentence":"Il negozio è ___ la posta e il bar.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"tra"},
+{"sentence":"Arrivo ___ Torino.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
+{"sentence":"Torno ___ lavoro.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"da"},
+{"sentence":"Parliamo ___ politica.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"di"},
+
+{"sentence":"Studio ___ mattina.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"di"},
+{"sentence":"Cammino ___ il parco.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"per"},
+{"sentence":"Il quadro è ___ muro.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"su"},
+{"sentence":"Vado ___ piedi.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
+{"sentence":"Scrivo ___ penna.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"con"},
+{"sentence":"Abito ___ Spagna.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"in"},
+{"sentence":"Esco ___ casa.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"di"},
+{"sentence":"Vengo ___ medico.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"da"},
+{"sentence":"Andiamo ___ cinema.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
+{"sentence":"Cammino ___ strada.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"per"},
+
+{"sentence":"Il cane dorme ___ divano.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"su"},
+{"sentence":"Il regalo è ___ Anna.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"per"},
+{"sentence":"Parlo ___ telefono.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"al"},
+{"sentence":"Il gatto passa ___ la sedia e il tavolo.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"tra"},
+{"sentence":"Il cane corre ___ il giardino.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"per"},
+{"sentence":"Scrivo ___ Marco.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
+{"sentence":"Torno ___ casa.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
+{"sentence":"Il tavolo è ___ legno.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"di"},
+{"sentence":"Cammino ___ amici.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"con"},
+{"sentence":"Arrivo ___ lavoro.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
+
+{"sentence":"Restiamo ___ casa.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
+{"sentence":"Studio ___ università.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"in"},
+{"sentence":"Vengo ___ bar.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"dal"},
+{"sentence":"Il gatto salta ___ tavolo.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"sul"},
+{"sentence":"Il cane corre ___ strada.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"per"},
+{"sentence":"La pizzeria è ___ il cinema e la banca.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"fra"},
+{"sentence":"Parliamo ___ musica.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"di"},
+{"sentence":"Scrivo ___ computer.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"con"},
+{"sentence":"Vivo ___ Francia.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"in"},
+{"sentence":"Andiamo ___ mare.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"al"}
+]
+}
+]
+
