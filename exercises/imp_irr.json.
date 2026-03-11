@@ -1,0 +1,43 @@
+```json
+[
+{
+"topic":"imperfetto_irregolari",
+"exercises":[
+{"sentence":"Io ___ molto felice.","options":["ero","eri","era","eravamo","eravate","erano"],"answer":"ero"},
+{"sentence":"Tu ___ stanco ieri.","options":["ero","eri","era","eravamo","eravate","erano"],"answer":"eri"},
+{"sentence":"Marco ___ a casa.","options":["ero","eri","era","eravamo","eravate","erano"],"answer":"era"},
+{"sentence":"Noi ___ molto giovani.","options":["ero","eri","era","eravamo","eravate","erano"],"answer":"eravamo"},
+{"sentence":"Voi ___ felici.","options":["ero","eri","era","eravamo","eravate","erano"],"answer":"eravate"},
+{"sentence":"Loro ___ molto occupati.","options":["ero","eri","era","eravamo","eravate","erano"],"answer":"erano"},
+
+{"sentence":"Io ___ spesso il pane.","options":["facevo","facevi","faceva","facevamo","facevate","facevano"],"answer":"facevo"},
+{"sentence":"Tu ___ sport.","options":["facevo","facevi","faceva","facevamo","facevate","facevano"],"answer":"facevi"},
+{"sentence":"Lui ___ molto lavoro.","options":["facevo","facevi","faceva","facevamo","facevate","facevano"],"answer":"faceva"},
+{"sentence":"Noi ___ i compiti.","options":["facevo","facevi","faceva","facevamo","facevate","facevano"],"answer":"facevamo"},
+{"sentence":"Voi ___ rumore.","options":["facevo","facevi","faceva","facevamo","facevate","facevano"],"answer":"facevate"},
+{"sentence":"Loro ___ una festa.","options":["facevo","facevi","faceva","facevamo","facevate","facevano"],"answer":"facevano"},
+
+{"sentence":"Io ___ la verità.","options":["dicevo","dicevi","diceva","dicevamo","dicevate","dicevano"],"answer":"dicevo"},
+{"sentence":"Tu ___ sempre questo.","options":["dicevo","dicevi","diceva","dicevamo","dicevate","dicevano"],"answer":"dicevi"},
+{"sentence":"Lei ___ tutto.","options":["dicevo","dicevi","diceva","dicevamo","dicevate","dicevano"],"answer":"diceva"},
+{"sentence":"Noi ___ la stessa cosa.","options":["dicevo","dicevi","diceva","dicevamo","dicevate","dicevano"],"answer":"dicevamo"},
+{"sentence":"Voi ___ bugie.","options":["dicevo","dicevi","diceva","dicevamo","dicevate","dicevano"],"answer":"dicevate"},
+{"sentence":"Loro ___ sempre sì.","options":["dicevo","dicevi","diceva","dicevamo","dicevate","dicevano"],"answer":"dicevano"},
+
+{"sentence":"Io ___ molta acqua.","options":["bevevo","bevevi","beveva","bevevamo","bevevate","bevevano"],"answer":"bevevo"},
+{"sentence":"Tu ___ vino.","options":["bevevo","bevevi","beveva","bevevamo","bevevate","bevevano"],"answer":"bevevi"},
+{"sentence":"Marco ___ birra.","options":["bevevo","bevevi","beveva","bevevamo","bevevate","bevevano"],"answer":"beveva"},
+{"sentence":"Noi ___ caffè.","options":["bevevo","bevevi","beveva","bevevamo","bevevate","bevevano"],"answer":"bevevamo"},
+{"sentence":"Voi ___ tè.","options":["bevevo","bevevi","beveva","bevevamo","bevevate","bevevano"],"answer":"bevevate"},
+{"sentence":"Loro ___ latte.","options":["bevevo","bevevi","beveva","bevevamo","bevevate","bevevano"],"answer":"bevevano"},
+
+{"sentence":"Io ___ molto vino.","options":["ponevo","ponevi","poneva","ponevamo","ponevate","ponevano"],"answer":"ponevo"},
+{"sentence":"Tu ___ il libro sul tavolo.","options":["ponevo","ponevi","poneva","ponevamo","ponevate","ponevano"],"answer":"ponevi"},
+{"sentence":"Lui ___ la domanda.","options":["ponevo","ponevi","poneva","ponevamo","ponevate","ponevano"],"answer":"poneva"},
+{"sentence":"Noi ___ attenzione.","options":["ponevo","ponevi","poneva","ponevamo","ponevate","ponevano"],"answer":"ponevamo"},
+{"sentence":"Voi ___ il problema.","options":["ponevo","ponevi","poneva","ponevamo","ponevate","ponevano"],"answer":"ponevate"},
+{"sentence":"Loro ___ condizioni.","options":["ponevo","ponevi","poneva","ponevamo","ponevate","ponevano"],"answer":"ponevano"}
+
+]
+}
+]
