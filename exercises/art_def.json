@@ -1,5 +1,5 @@
 {
-"topic":"art_def",
+"topic": "articoli_determinativi",
 "exercises":[
 
 {"sentence":"___ gatto dorme.","options":["il","lo","la","l'","i","gli","le"],"answer":"il"},
@@ -70,3 +70,4 @@
 
 ]
 }
+
