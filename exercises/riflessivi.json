@@ -1,0 +1,72 @@
+[
+{
+"topic":"verbi_riflessivi",
+"exercises":[
+
+{"sentence":"Io ___ sveglio alle sette.","options":["mi","ti","si","ci","vi","si"],"answer":"mi"},
+{"sentence":"Tu ___ svegli presto.","options":["mi","ti","si","ci","vi","si"],"answer":"ti"},
+{"sentence":"Lui ___ sveglia alle otto.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Lei ___ sveglia presto.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Noi ___ svegliamo alle sette.","options":["mi","ti","si","ci","vi","si"],"answer":"ci"},
+{"sentence":"Voi ___ svegliate tardi.","options":["mi","ti","si","ci","vi","si"],"answer":"vi"},
+{"sentence":"Loro ___ svegliano presto.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+
+{"sentence":"Io ___ alzo subito.","options":["mi","ti","si","ci","vi","si"],"answer":"mi"},
+{"sentence":"Tu ___ alzi lentamente.","options":["mi","ti","si","ci","vi","si"],"answer":"ti"},
+{"sentence":"Lui ___ alza dal letto.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Lei ___ alza presto.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Noi ___ alziamo alle sei.","options":["mi","ti","si","ci","vi","si"],"answer":"ci"},
+{"sentence":"Voi ___ alzate tardi.","options":["mi","ti","si","ci","vi","si"],"answer":"vi"},
+{"sentence":"Loro ___ alzano presto.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+
+{"sentence":"Io ___ lavo le mani.","options":["mi","ti","si","ci","vi","si"],"answer":"mi"},
+{"sentence":"Tu ___ lavi il viso.","options":["mi","ti","si","ci","vi","si"],"answer":"ti"},
+{"sentence":"Lui ___ lava spesso.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Lei ___ lava ogni mattina.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Noi ___ laviamo prima di mangiare.","options":["mi","ti","si","ci","vi","si"],"answer":"ci"},
+{"sentence":"Voi ___ lavate velocemente.","options":["mi","ti","si","ci","vi","si"],"answer":"vi"},
+{"sentence":"Loro ___ lavano dopo lo sport.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+
+{"sentence":"Io ___ preparo per uscire.","options":["mi","ti","si","ci","vi","si"],"answer":"mi"},
+{"sentence":"Tu ___ prepari rapidamente.","options":["mi","ti","si","ci","vi","si"],"answer":"ti"},
+{"sentence":"Lui ___ prepara per la scuola.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Lei ___ prepara per il lavoro.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Noi ___ prepariamo per il viaggio.","options":["mi","ti","si","ci","vi","si"],"answer":"ci"},
+{"sentence":"Voi ___ preparate per la festa.","options":["mi","ti","si","ci","vi","si"],"answer":"vi"},
+{"sentence":"Loro ___ preparano lentamente.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+
+{"sentence":"Io ___ addormento presto.","options":["mi","ti","si","ci","vi","si"],"answer":"mi"},
+{"sentence":"Tu ___ addormenti sul divano.","options":["mi","ti","si","ci","vi","si"],"answer":"ti"},
+{"sentence":"Lui ___ addormenta subito.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Lei ___ addormenta tardi.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Noi ___ addormentiamo tardi.","options":["mi","ti","si","ci","vi","si"],"answer":"ci"},
+{"sentence":"Voi ___ addormentate presto.","options":["mi","ti","si","ci","vi","si"],"answer":"vi"},
+{"sentence":"Loro ___ addormentano velocemente.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+
+{"sentence":"Io ___ sento bene oggi.","options":["mi","ti","si","ci","vi","si"],"answer":"mi"},
+{"sentence":"Tu ___ senti stanco.","options":["mi","ti","si","ci","vi","si"],"answer":"ti"},
+{"sentence":"Lui ___ sente male.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Lei ___ sente meglio.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Noi ___ sentiamo felici.","options":["mi","ti","si","ci","vi","si"],"answer":"ci"},
+{"sentence":"Voi ___ sentite pronti.","options":["mi","ti","si","ci","vi","si"],"answer":"vi"},
+{"sentence":"Loro ___ sentono tranquilli.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+
+{"sentence":"Io ___ diverto molto.","options":["mi","ti","si","ci","vi","si"],"answer":"mi"},
+{"sentence":"Tu ___ diverti alla festa.","options":["mi","ti","si","ci","vi","si"],"answer":"ti"},
+{"sentence":"Lui ___ diverte al cinema.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Lei ___ diverte molto.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Noi ___ divertiamo insieme.","options":["mi","ti","si","ci","vi","si"],"answer":"ci"},
+{"sentence":"Voi ___ divertite al mare.","options":["mi","ti","si","ci","vi","si"],"answer":"vi"},
+{"sentence":"Loro ___ divertono sempre.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+
+{"sentence":"Io ___ riposo un po'.","options":["mi","ti","si","ci","vi","si"],"answer":"mi"},
+{"sentence":"Tu ___ riposi dopo il lavoro.","options":["mi","ti","si","ci","vi","si"],"answer":"ti"},
+{"sentence":"Lui ___ riposa sul divano.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Lei ___ riposa molto.","options":["mi","ti","si","ci","vi","si"],"answer":"si"},
+{"sentence":"Noi ___ riposiamo nel pomeriggio.","options":["mi","ti","si","ci","vi","si"],"answer":"ci"},
+{"sentence":"Voi ___ riposate spesso.","options":["mi","ti","si","ci","vi","si"],"answer":"vi"},
+{"sentence":"Loro ___ riposano poco.","options":["mi","ti","si","ci","vi","si"],"answer":"si"}
+
+]
+}
+]
