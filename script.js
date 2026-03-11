@@ -1,24 +1,10 @@
-alert("JS работает");
-
-// ===== GLOBALS =====
 let exercises = [];
 let filtered = [];
 let currentExercise = null;
 let good = 0;
 let bad = 0;
 
-
-// ===== HELPERS =====
-function random(arr){
-  return arr[Math.floor(Math.random()*arr.length)];
-}
-
-function shuffle(arr){
-  return [...arr].sort(()=>Math.random()-0.5);
-}
-
-
-// ===== TOPIC MAP =====
+// соответствие кнопок HTML и тем JSON
 const topicMap = {
   art_def: "articoli_determinativi",
   art_indef: "articoli_indeterminativi",
@@ -39,28 +25,19 @@ const topicMap = {
   impv_irr: "imperativo_irregolari"
 };
 
-
-// ===== LOAD DATA =====
 async function loadExercises(){
-
-  try{
-
-    const res = await fetch("exercises.json");
-
-    exercises = await res.json();
-
-    console.log("JSON загружен", exercises);
-
-  }catch(e){
-
-    console.error("JSON не загрузился", e);
-
-  }
-
+  const res = await fetch("exercises.json");
+  exercises = await res.json();
 }
 
+function random(arr){
+  return arr[Math.floor(Math.random()*arr.length)];
+}
 
-// ===== START TOPIC =====
+function shuffle(arr){
+  return [...arr].sort(()=>Math.random()-0.5);
+}
+
 async function start(topic){
 
   if(!exercises.length){
@@ -72,14 +49,8 @@ async function start(topic){
   const group = exercises.find(t => t.topic === realTopic);
 
   if(!group){
-
-    console.warn("Тема не найдена:", realTopic);
-
-    document.getElementById("question").textContent =
-      "Упражнения не найдены";
-
+    document.getElementById("question").textContent = "Упражнения не найдены";
     document.getElementById("answers").innerHTML = "";
-
     return;
   }
 
@@ -88,8 +59,6 @@ async function start(topic){
   generateExercise();
 }
 
-
-// ===== GENERATE =====
 function generateExercise(){
 
   if(!filtered.length) return;
@@ -100,26 +69,20 @@ function generateExercise(){
     currentExercise.sentence,
     shuffle(currentExercise.options)
   );
-
 }
 
-
-// ===== RENDER =====
 function renderExercise(sentence, options){
 
   const q = document.getElementById("question");
   const a = document.getElementById("answers");
 
   q.textContent = sentence;
-
   a.innerHTML = "";
 
   options.forEach(opt => {
 
     const btn = document.createElement("button");
-
     btn.className = "answer";
-
     btn.textContent = opt;
 
     btn.onclick = () => checkAnswer(opt);
@@ -130,39 +93,27 @@ function renderExercise(sentence, options){
 
 }
 
-
-// ===== CHECK =====
 function checkAnswer(choice){
 
   if(choice === currentExercise.answer){
 
     good++;
-
     document.getElementById("good").textContent = good;
+    document.getElementById("result").textContent = "✅ Правильно";
 
-    document.getElementById("result").textContent =
-      "✅ Правильно";
-
-  }else{
+  } else {
 
     bad++;
-
     document.getElementById("bad").textContent = bad;
-
     document.getElementById("result").textContent =
-      "❌ Неправильно. Правильный ответ: " +
-      currentExercise.answer;
+      "❌ Неправильно. Правильный ответ: " + currentExercise.answer;
 
   }
 
 }
 
-
-// ===== NEXT =====
 function generate(){
   generateExercise();
 }
 
-
-// ===== PRELOAD =====
 loadExercises();
