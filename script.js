@@ -5,9 +5,12 @@ let wrongCount = 0;
 
 // функция перемешивания
 function shuffle(array) {
+  if (!array) return;
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
   }
 }
 
@@ -15,14 +18,15 @@ function shuffle(array) {
 function start(topic) {
   fetch("exercises/" + topic + ".json")
     .then(response => {
-      if (!response.ok) throw new Error("Файл не найден: " + topic);
+      if (!response.ok) {
+        throw new Error("Файл не найден: exercises/" + topic + ".json");
+      }
       return response.json();
     })
     .then(data => {
 
-      exercises = data.exercises;
+      exercises = data.exercises || [];
 
-      // перемешиваем упражнения
       shuffle(exercises);
 
       currentExercise = 0;
@@ -57,11 +61,11 @@ function showExercise() {
   }
 
   const ex = exercises[currentExercise];
+
   questionDiv.textContent = ex.sentence;
 
   answersDiv.innerHTML = "";
 
-  // перемешиваем варианты ответов
   let options = [...ex.options];
   shuffle(options);
 
@@ -77,7 +81,6 @@ function showExercise() {
 
   });
 
-  // кнопка скрыта до ответа
   nextBtn.style.display = "none";
 }
 
@@ -109,7 +112,6 @@ function checkAnswer(answer, clickedBtn) {
   document.getElementById("good").textContent = correctCount;
   document.getElementById("bad").textContent = wrongCount;
 
-  // показываем кнопку перехода
   document.getElementById("nextBtn").style.display = "inline-block";
 }
 
