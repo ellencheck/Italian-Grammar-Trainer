@@ -16,7 +16,6 @@ function start(topic) {
       correctCount = 0;
       wrongCount = 0;
 
-      // Обновляем счётчики
       document.getElementById("good").textContent = correctCount;
       document.getElementById("bad").textContent = wrongCount;
 
@@ -33,7 +32,6 @@ function showExercise() {
   const questionDiv = document.getElementById("question");
   const answersDiv = document.getElementById("answers");
 
-  // Проверка на конец темы
   if (currentExercise >= exercises.length) {
     questionDiv.textContent = "Тема завершена!";
     answersDiv.innerHTML = "";
@@ -43,15 +41,12 @@ function showExercise() {
   const ex = exercises[currentExercise];
   questionDiv.textContent = ex.sentence;
 
-  // Очистка вариантов
   answersDiv.innerHTML = "";
 
-  // Кнопки вариантов
   ex.options.forEach(option => {
     const btn = document.createElement("button");
     btn.textContent = option;
-    btn.classList.add("answer"); // дизайн берется из CSS
-
+    btn.classList.add("answer");
     btn.onclick = () => checkAnswer(option, btn);
     answersDiv.appendChild(btn);
   });
@@ -77,8 +72,7 @@ function checkAnswer(answer, clickedBtn) {
   const buttons = document.getElementById("answers").children;
 
   for (let btn of buttons) {
-    btn.disabled = true; // нельзя повторно нажимать
-
+    btn.disabled = true;
     if (btn.textContent === correct) {
       btn.classList.add("correct");
       btn.classList.remove("wrong");
@@ -90,14 +84,12 @@ function checkAnswer(answer, clickedBtn) {
     }
   }
 
-  // Обновляем счёт
   if (answer === correct) correctCount++;
   else wrongCount++;
 
   document.getElementById("good").textContent = correctCount;
   document.getElementById("bad").textContent = wrongCount;
 
-  // Переход к следующему через 1 секунду
   setTimeout(() => {
     currentExercise++;
     showExercise();
@@ -108,14 +100,14 @@ function checkAnswer(answer, clickedBtn) {
 function speakText(text) {
   if ('speechSynthesis' in window) {
     const utter = new SpeechSynthesisUtterance(text);
-    utter.lang = "it-IT"; // итальянский
+    utter.lang = "it-IT";
     window.speechSynthesis.speak(utter);
   } else {
     alert("Озвучка не поддерживается в этом браузере.");
   }
 }
 
-// Кнопка "Следующий" использует эту функцию
+// Кнопка "Следующий"
 function generate() {
   if (currentExercise < exercises.length) showExercise();
 }
