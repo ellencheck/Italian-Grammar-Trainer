@@ -3,40 +3,21 @@ let currentExercise = 0;
 let correctCount = 0;
 let wrongCount = 0;
 
-// функция перемешивания
-function shuffle(array) {
-  if (!array) return;
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  }
-}
-
 // Начало темы
 function start(topic) {
   fetch("exercises/" + topic + ".json")
     .then(response => {
-      if (!response.ok) {
-        throw new Error("Файл не найден: exercises/" + topic + ".json");
-      }
+      if (!response.ok) throw new Error("Файл не найден: " + topic);
       return response.json();
     })
     .then(data => {
-
-      exercises = data.exercises || [];
-
-      shuffle(exercises);
-
+      exercises = data.exercises;
       currentExercise = 0;
       correctCount = 0;
       wrongCount = 0;
 
       document.getElementById("good").textContent = correctCount;
       document.getElementById("bad").textContent = wrongCount;
-
-      document.getElementById("nextBtn").style.display = "none";
 
       showExercise();
     })
@@ -61,15 +42,11 @@ function showExercise() {
   }
 
   const ex = exercises[currentExercise];
-
   questionDiv.textContent = ex.sentence;
 
   answersDiv.innerHTML = "";
 
-  let options = [...ex.options];
-  shuffle(options);
-
-  options.forEach(option => {
+  ex.options.forEach(option => {
 
     const btn = document.createElement("button");
     btn.textContent = option;
@@ -81,6 +58,7 @@ function showExercise() {
 
   });
 
+  // показываем кнопку "Следующий"
   nextBtn.style.display = "none";
 }
 
@@ -112,6 +90,7 @@ function checkAnswer(answer, clickedBtn) {
   document.getElementById("good").textContent = correctCount;
   document.getElementById("bad").textContent = wrongCount;
 
+  // показываем кнопку перехода
   document.getElementById("nextBtn").style.display = "inline-block";
 }
 
