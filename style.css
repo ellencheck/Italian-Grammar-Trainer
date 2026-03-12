@@ -1,58 +1,32 @@
-/* ===== ОБЩИЕ СТИЛИ ===== */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg,#d7e3dd,#eef3f0);
+    color: #1f3d2a;
 }
 
-/* ===== КОНТЕЙНЕР ===== */
+/* контейнер */
 .exercise-screen {
     max-width: 1100px;
     margin: auto;
     padding: 40px 20px;
     box-sizing: border-box;
-    border-radius: 16px;
-}
-
-/* ===== СОДЕРЖАНИЕ (контент) ===== */
-.exercise-screen.content {
-    background: #4fa66f; /* насыщенный зеленый фон */
-    color: white;
-}
-
-.exercise-screen.content h1,
-.exercise-screen.content h2,
-.exercise-screen.content h3 {
-    color: white;
-}
-
-.exercise-screen.content .menu button {
-    background: white;
-    color: #4fa66f;
-    border: 2px solid white;
-    transition: all 0.2s;
-}
-
-.exercise-screen.content .menu button:hover {
-    background: rgba(255,255,255,0.8);
-    color: #2f6b48;
-}
-
-/* ===== УПРАЖНЕНИЯ ===== */
-.exercise-screen.exercise {
     background: rgba(255,255,255,0.95);
+    border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    color: #1f3d2a;
 }
 
-/* заголовки для обеих частей */
+/* заголовок */
 .exercise-screen h1 {
     font-size: 44px;
     text-align: center;
+    color: #2f6b48;
     margin-bottom: 35px;
 }
 
+/* ===== МЕНЮ ===== */
 .menu {
     text-align: center;
     margin-bottom: 35px;
@@ -61,15 +35,17 @@ html, body {
 .menu h2 {
     font-size: 32px;
     margin: 25px 0 10px;
+    color: #2f6b48;
 }
 
 .menu h3 {
     font-size: 24px;
     margin: 18px 0 10px;
+    color: #355f47;
 }
 
-/* кнопки меню для упражнений */
-.exercise-screen.exercise .menu button {
+/* кнопки меню */
+.menu button {
     display: inline-block;
     font-size: 22px;
     padding: 14px 22px;
@@ -82,17 +58,18 @@ html, body {
     transition: all 0.2s;
 }
 
-.exercise-screen.exercise .menu button:hover {
+.menu button:hover {
     background: #f3f7f5;
     transform: translateY(-2px);
 }
 
-/* ===== ВОПРОСЫ ===== */
+/* ===== ВОПРОС ===== */
 #question {
     font-size: 50px;
     font-weight: 600;
     text-align: center;
     margin: 40px 0;
+    color: #1f3d2a;
 }
 
 /* контейнер ответов */
@@ -101,8 +78,8 @@ html, body {
     margin: auto;
 }
 
-/* ответы упражнения */
-.exercise-screen.exercise .answer {
+/* ===== ОТВЕТЫ ===== */
+.exercise-screen .answer {
     width: 100%;
     font-size: 32px;
     padding: 22px;
@@ -116,26 +93,26 @@ html, body {
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-.exercise-screen.exercise .answer:hover {
+.exercise-screen .answer:hover {
     background: #f3f7f5;
     transform: translateY(-2px);
 }
 
-.exercise-screen.exercise .answer.correct {
+.exercise-screen .answer.correct {
     background: #4fa66f;
     color: white;
     border-color: #4fa66f;
 }
 
-.exercise-screen.exercise .answer.wrong {
+.exercise-screen .answer.wrong {
     background: #e05656;
     color: white;
     border-color: #e05656;
 }
 
-/* кнопка "Следующий" — только упражнения */
-.exercise-screen.exercise .next {
-    display: block;
+/* ===== КНОПКА СЛЕДУЮЩИЙ ===== */
+.exercise-screen .next {
+    display: block; /* возвращаем, чтобы была видна */
     margin: 35px auto 0;
     font-size: 24px;
     padding: 16px 30px;
@@ -145,15 +122,16 @@ html, body {
     color: white;
     cursor: pointer;
     transition: all 0.2s;
+    text-align: center;
 }
 
-.exercise-screen.exercise .next:hover {
+.exercise-screen .next:hover {
     background: #63b885;
     transform: translateY(-2px);
 }
 
-/* кнопка прослушивания — только упражнения */
-.exercise-screen.exercise #speakBtn {
+/* ===== КНОПКА ПРОСЛУШИВАНИЯ ===== */
+#speakBtn {
     font-size: 22px;
     padding: 12px 20px;
     border-radius: 12px;
@@ -165,7 +143,7 @@ html, body {
     transition: all 0.2s;
 }
 
-.exercise-screen.exercise #speakBtn:hover {
+#speakBtn:hover {
     background: #63b885;
     transform: translateY(-2px);
 }
@@ -175,6 +153,7 @@ html, body {
     text-align: center;
     font-size: 22px;
     margin-top: 20px;
+    color: #2e5f3e;
 }
 
 /* адаптив */
@@ -187,7 +166,7 @@ html, body {
         font-size: 36px;
     }
 
-    .exercise-screen.exercise .answer {
+    .exercise-screen .answer {
         font-size: 24px;
         padding: 16px;
     }
@@ -197,7 +176,7 @@ html, body {
         padding: 12px 18px;
     }
 
-    .exercise-screen.exercise .next {
+    .exercise-screen .next {
         font-size: 20px;
         padding: 14px 24px;
     }
