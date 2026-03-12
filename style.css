@@ -3,230 +3,184 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #cfd8d3;
-  overflow-x: hidden; /* горизонтальный скролл запрещен */
+  background: linear-gradient(135deg,#d7e3dd,#eef3f0);
 }
 
-body {
-  display: block; /* контейнер на всю ширину */
+/* центрируем тренажёр */
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-/* ======================
-   EXERCISE SCREEN
-====================== */
+/* карточка тренажёра */
 
-.exercise-screen {
-  width: 100%;
-  min-height: 100vh;
-  padding: 40px 20px;
-  box-sizing: border-box;
-  background-color: #e7ebe8;
-  overflow-y: auto; /* вертикальный скролл */
-}
+.exercise-screen{
 
-.exercise-screen h1 {
-  font-size: 75px; /* крупный шрифт для вопросов */
-  color: #2e5f3e;
-  font-weight: 600;
-  margin-bottom: 40px;
-  text-align: center;
-}
+  width:700px;
+  max-width:90%;
 
-.exercise-screen .answer {
-  width: 100%;
-  border: none;
-  border-radius: 14px;
-  padding: 30px;      /* крупные кнопки */
-  margin: 20px 0;
-  font-size: 50px;    /* крупный шрифт для вариантов */
-  font-weight: 700;
-  color: #2e5f3e;
-  background-color: #f2f4f3;
-  border: 3px solid #cfd8d3;
-  cursor: pointer;
-  transition: 0.2s;
-}
+  background:white;
 
-.exercise-screen .answer:hover {
-  background-color: #e3ebe6;
-  border-color: #5fa574;
-  transform: translateY(-2px);
-}
+  border-radius:22px;
 
-.exercise-screen .answer.correct {
-  background-color: #5fa574;
-  color: white;
-  border-color: #5fa574;
-}
+  padding:35px;
 
-.exercise-screen .answer.wrong {
-  background-color: #c96a6a;
-  color: white;
-  border-color: #c96a6a;
-}
+  box-shadow:
+  0 25px 60px rgba(0,0,0,0.15);
 
-.exercise-screen #result {
-  font-size: 45px;
-  color: #2e5f3e;
-  margin-top: 30px;
-  text-align: center;
-}
-
-.exercise-screen .next {
-  width: 100%;
-  padding: 25px 0;
-  font-size: 50px;
-  border-radius: 14px;
-  background-color: #5fa574;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 30px;
-}
-
-.exercise-screen .next:hover {
-  filter: brightness(1.1);
-}
-/* ======================
-   VISUAL UPGRADE
-   (добавить в конец CSS)
-====================== */
-
-/* общий фон */
-body {
-  background: linear-gradient(135deg,#cfd8d3,#e7ebe8);
-}
-
-/* главный контейнер */
-.exercise-screen {
-  max-width: 900px;
-  margin: auto;
-  background: #f7faf8;
-  border-radius: 20px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-  padding: 50px 40px;
 }
 
 /* заголовок */
-.exercise-screen h1 {
-  font-size: 70px;
-  color: #2f6b48;
-  letter-spacing: 1px;
+
+.exercise-screen h1{
+
+  font-size:34px;
+
+  text-align:center;
+
+  color:#2f6b48;
+
+  margin-bottom:25px;
 }
 
-/* кнопки ответов */
-.exercise-screen .answer {
+/* вопрос */
 
-  background: linear-gradient(180deg,#6fbe8a,#4da46d);
-  color: white;
-  border: none;
+#question{
 
-  box-shadow:
-    0 6px 0 #3b8757,
-    0 12px 25px rgba(0,0,0,0.2);
+  font-size:32px;
 
-  transition: all 0.15s ease;
+  text-align:center;
+
+  margin-bottom:25px;
+
+  color:#2e5f3e;
+}
+
+/* ответы */
+
+.exercise-screen .answer{
+
+  width:100%;
+
+  border:none;
+
+  border-radius:18px;
+
+  padding:18px;
+
+  margin:12px 0;
+
+  font-size:24px;
+
+  font-weight:600;
+
+  color:white;
+
+  background:linear-gradient(180deg,#69c488,#4fa66f);
+
+  cursor:pointer;
+
+  transition:0.15s;
+
 }
 
 /* hover */
-.exercise-screen .answer:hover {
 
-  background: linear-gradient(180deg,#7dd79a,#5bb87c);
+.exercise-screen .answer:hover{
 
-  transform: translateY(-3px);
+  background:linear-gradient(180deg,#7ad79b,#5bb87c);
 
-  box-shadow:
-    0 9px 0 #3b8757,
-    0 18px 30px rgba(0,0,0,0.25);
+  transform:translateY(-2px);
 }
 
 /* нажатие */
-.exercise-screen .answer:active {
 
-  transform: translateY(4px);
+.exercise-screen .answer:active{
 
-  box-shadow:
-    0 2px 0 #3b8757,
-    0 5px 12px rgba(0,0,0,0.25);
+  transform:translateY(2px);
 }
 
-/* правильный ответ */
-.exercise-screen .answer.correct {
+/* правильный */
 
-  background: linear-gradient(180deg,#4bd47f,#2ea964);
-  box-shadow: 0 6px 0 #1d7c48;
+.exercise-screen .answer.correct{
+
+  background:#2ecc71;
 }
 
 /* неправильный */
-.exercise-screen .answer.wrong {
 
-  background: linear-gradient(180deg,#e56f6f,#c64b4b);
-  box-shadow: 0 6px 0 #943333;
+.exercise-screen .answer.wrong{
+
+  background:#e05656;
 }
 
 /* кнопка следующий */
-.exercise-screen .next {
 
-  background: linear-gradient(180deg,#63c487,#429d66);
-  font-weight: 700;
+.exercise-screen .next{
 
-  box-shadow:
-    0 6px 0 #347a50,
-    0 12px 25px rgba(0,0,0,0.2);
+  width:100%;
 
-  transition: all 0.15s;
+  padding:14px;
+
+  font-size:22px;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:#4fa66f;
+
+  color:white;
+
+  cursor:pointer;
+
+  margin-top:20px;
 }
 
-.exercise-screen .next:hover {
-
-  background: linear-gradient(180deg,#75d899,#4fb574);
-
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 9px 0 #347a50,
-    0 18px 30px rgba(0,0,0,0.25);
+.exercise-screen .next:hover{
+  background:#5bb87c;
 }
 
-.exercise-screen .next:active {
+/* статистика */
 
-  transform: translateY(4px);
+.stats{
 
-  box-shadow:
-    0 2px 0 #347a50,
-    0 6px 12px rgba(0,0,0,0.25);
-}
+  text-align:center;
 
-/* счётчик */
-.stats {
+  font-size:18px;
 
-  text-align: center;
-  font-size: 28px;
-  margin-top: 30px;
-  color: #2e5f3e;
-  font-weight: 600;
+  margin-top:10px;
+
+  color:#2e5f3e;
 }
 
 /* меню */
-.menu button {
 
-  background: linear-gradient(180deg,#7bcf97,#4fae71);
-  border: none;
-  border-radius: 10px;
-  padding: 10px 16px;
-  margin: 6px;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-
-  box-shadow: 0 4px 0 #3b8757;
+.menu{
+  margin-bottom:20px;
 }
 
-.menu button:hover {
-  transform: translateY(-1px);
+.menu button{
+
+  border:none;
+
+  border-radius:12px;
+
+  padding:8px 14px;
+
+  margin:4px;
+
+  background:#4fa66f;
+
+  color:white;
+
+  font-size:14px;
+
+  cursor:pointer;
 }
 
-.menu button:active {
-  transform: translateY(3px);
-  box-shadow: 0 1px 0 #3b8757;
+.menu button:hover{
+  background:#5bb87c;
 }
