@@ -30,18 +30,24 @@ html, body {
 .menu {
     text-align: center;
     margin-bottom: 35px;
+
+    /* новое */
+    background: #4fa66f;
+    padding: 30px;
+    border-radius: 16px;
+    color: white;
 }
 
 .menu h2 {
     font-size: 32px;
     margin: 25px 0 10px;
-    color: #2f6b48;
+    color: white;
 }
 
 .menu h3 {
     font-size: 24px;
     margin: 18px 0 10px;
-    color: #355f47;
+    color: white;
 }
 
 /* кнопки меню */
@@ -51,15 +57,15 @@ html, body {
     padding: 14px 22px;
     margin: 6px;
     border-radius: 14px;
-    border: 2px solid #4fa66f;
-    background: white;
-    color: #1f3d2a;
+    border: 2px solid white;
+    background: #4fa66f;
+    color: white;
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .menu button:hover {
-    background: #f3f7f5;
+    background: #63b885;
     transform: translateY(-2px);
 }
 
@@ -112,7 +118,7 @@ html, body {
 
 /* ===== КНОПКА СЛЕДУЮЩИЙ ===== */
 .exercise-screen .next {
-    display: block; /* возвращаем, чтобы была видна */
+    display: block;
     margin: 35px auto 0;
     font-size: 24px;
     padding: 16px 30px;
