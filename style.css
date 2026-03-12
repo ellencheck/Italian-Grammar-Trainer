@@ -230,3 +230,101 @@ html, body{
 
   padding:16px;
 }
+/* ===== СКРЫТЬ КНОПКУ "СЛЕДУЮЩИЙ" ПОКА НЕТ УПРАЖНЕНИЯ ===== */
+
+#question:contains("Выбери упражнение") ~ .next{
+  display:none;
+}
+
+/* ===== МЕНЮ СДЕЛАТЬ КРУПНЕЕ ===== */
+
+.menu h2{
+  font-size:28px;
+  margin-top:25px;
+  color:#2f6b48;
+}
+
+.menu h3{
+  font-size:22px;
+  margin:12px 0;
+  color:#355f47;
+}
+
+.menu button{
+
+  font-size:18px;
+
+  padding:10px 18px;
+
+  border-radius:12px;
+
+  margin:6px;
+
+  background:#4fa66f;
+
+  color:white;
+
+  cursor:pointer;
+}
+
+/* ===== КНОПКИ ОТВЕТОВ — БЕЛЫЕ ===== */
+
+.exercise-screen .answer{
+
+  background:white;
+
+  color:#1f3d2a;
+
+  border:2px solid #4fa66f;
+
+  font-size:30px;
+
+  padding:22px;
+
+  border-radius:16px;
+}
+
+/* hover */
+
+.exercise-screen .answer:hover{
+  background:#f3f7f5;
+}
+
+/* правильный */
+
+.exercise-screen .answer.correct{
+  background:#4fa66f;
+  color:white;
+}
+
+/* неправильный */
+
+.exercise-screen .answer.wrong{
+  background:#e05656;
+  color:white;
+  border-color:#e05656;
+}
+
+/* ===== КНОПКА СЛЕДУЮЩИЙ ===== */
+
+.exercise-screen .next{
+
+  font-size:24px;
+
+  padding:16px 28px;
+
+  border-radius:14px;
+}
+
+/* ===== КНОПКА ПРОСЛУШИВАНИЯ ===== */
+
+#speakBtn{
+
+  font-size:22px;
+
+  padding:12px 20px;
+
+  border-radius:12px;
+
+  margin-top:15px;
+}
