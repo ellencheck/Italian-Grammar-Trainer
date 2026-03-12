@@ -16,7 +16,6 @@ function start(topic) {
       correctCount = 0;
       wrongCount = 0;
 
-      // Сброс счётчиков
       document.getElementById("good").textContent = correctCount;
       document.getElementById("bad").textContent = wrongCount;
 
@@ -30,88 +29,76 @@ function start(topic) {
 
 // Показ упражнения
 function showExercise() {
+
   const questionDiv = document.getElementById("question");
   const answersDiv = document.getElementById("answers");
+  const nextBtn = document.getElementById("nextBtn");
 
   if (currentExercise >= exercises.length) {
     questionDiv.textContent = "Тема завершена!";
     answersDiv.innerHTML = "";
+    nextBtn.style.display = "none";
     return;
   }
 
   const ex = exercises[currentExercise];
   questionDiv.textContent = ex.sentence;
 
-  // Очистка вариантов
   answersDiv.innerHTML = "";
 
-  // Добавляем кнопки ответов
   ex.options.forEach(option => {
+
     const btn = document.createElement("button");
     btn.textContent = option;
-    btn.classList.add("answer"); // стиль из CSS
+    btn.classList.add("answer");
+
     btn.onclick = () => checkAnswer(option, btn);
+
     answersDiv.appendChild(btn);
+
   });
 
-  // Кнопка озвучки
-  let speakBtn = document.getElementById("speakBtn");
-  if (!speakBtn) {
-    speakBtn = document.createElement("button");
-    speakBtn.id = "speakBtn";
-    speakBtn.textContent = "🔊 Прослушать";
-    speakBtn.classList.add("next");
-    speakBtn.style.marginTop = "10px";
-    speakBtn.onclick = () => speakText(ex.sentence);
-    answersDiv.parentNode.insertBefore(speakBtn, answersDiv.nextSibling);
-  }
+  // показываем кнопку "Следующий"
+  nextBtn.style.display = "none";
 }
 
 // Проверка ответа
 function checkAnswer(answer, clickedBtn) {
+
   const ex = exercises[currentExercise];
   const correct = ex.answer;
+
   const buttons = document.getElementById("answers").children;
 
   for (let btn of buttons) {
+
     btn.disabled = true;
+
     if (btn.textContent === correct) {
       btn.classList.add("correct");
-      btn.classList.remove("wrong");
-    } else if (btn === clickedBtn && answer !== correct) {
-      btn.classList.add("wrong");
-      btn.classList.remove("correct");
-    } else {
-      btn.classList.remove("correct", "wrong");
     }
+
+    else if (btn === clickedBtn && answer !== correct) {
+      btn.classList.add("wrong");
+    }
+
   }
 
-  // Обновляем счёт
   if (answer === correct) correctCount++;
   else wrongCount++;
 
   document.getElementById("good").textContent = correctCount;
   document.getElementById("bad").textContent = wrongCount;
 
-  // Авто-переход через 1 сек
-  setTimeout(() => {
-    currentExercise++;
-    showExercise();
-  }, 1000);
-}
-
-// Озвучка текста по кнопке
-function speakText(text) {
-  if ('speechSynthesis' in window) {
-    const utter = new SpeechSynthesisUtterance(text);
-    utter.lang = "it-IT";
-    window.speechSynthesis.speak(utter);
-  } else {
-    alert("Озвучка не поддерживается в этом браузере.");
-  }
+  // показываем кнопку перехода
+  document.getElementById("nextBtn").style.display = "inline-block";
 }
 
 // Кнопка "Следующий"
 function generate() {
-  if (currentExercise < exercises.length) showExercise();
+
+  currentExercise++;
+
+  showExercise();
+
 }
