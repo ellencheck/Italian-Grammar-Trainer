@@ -1,330 +1,215 @@
-html, body{
-  margin:0;
-  padding:0;
-  height:100%;
-  font-family:"Segoe UI", Arial, sans-serif;
-  background:linear-gradient(135deg,#d7e3dd,#eef3f0);
+html,body{
+margin:0;
+padding:0;
+height:100%;
+font-family:"Segoe UI",Arial,sans-serif;
+background:linear-gradient(135deg,#d7e3dd,#eef3f0);
 }
 
-/* тренажёр занимает почти весь экран */
+/* контейнер */
 
 .exercise-screen{
 
-  width:100%;
-  max-width:1100px;
+max-width:1100px;
+margin:auto;
 
-  margin:auto;
-
-  padding:40px;
-
-  box-sizing:border-box;
+padding:40px;
+box-sizing:border-box;
 }
 
 /* заголовок */
 
 .exercise-screen h1{
 
-  font-size:42px;
-
-  text-align:center;
-
-  color:#2f6b48;
-
-  margin-bottom:30px;
+font-size:44px;
+text-align:center;
+color:#2f6b48;
+margin-bottom:35px;
 }
 
-/* вопрос — крупный */
-
-#question{
-
-  font-size:46px;
-
-  font-weight:600;
-
-  text-align:center;
-
-  margin:40px 0;
-
-  color:#1f3d2a;
-}
-
-/* контейнер ответов */
-
-#answers{
-  max-width:700px;
-  margin:auto;
-}
-
-/* кнопки */
-
-.exercise-screen .answer{
-
-  width:100%;
-
-  border:none;
-
-  border-radius:14px;
-
-  padding:16px;
-
-  margin:10px 0;
-
-  font-size:24px;
-
-  font-weight:600;
-
-  color:white;
-
-  background:#4fa66f;
-
-  cursor:pointer;
-
-  transition:0.15s;
-}
-
-/* hover */
-
-.exercise-screen .answer:hover{
-  background:#63b885;
-}
-
-/* правильный */
-
-.exercise-screen .answer.correct{
-  background:#2ecc71;
-}
-
-/* неправильный */
-
-.exercise-screen .answer.wrong{
-  background:#e05656;
-}
-
-/* кнопка следующий */
-
-.exercise-screen .next{
-
-  display:block;
-
-  margin:30px auto 0;
-
-  width:260px;
-
-  padding:14px;
-
-  font-size:20px;
-
-  border:none;
-
-  border-radius:12px;
-
-  background:#4fa66f;
-
-  color:white;
-
-  cursor:pointer;
-}
-
-.exercise-screen .next:hover{
-  background:#63b885;
-}
-
-/* статистика */
-
-.stats{
-
-  text-align:center;
-
-  font-size:20px;
-
-  margin-top:20px;
-
-  color:#2e5f3e;
-}
-
-/* меню */
+/* ===== МЕНЮ ===== */
 
 .menu{
 
-  text-align:center;
-
-  margin-bottom:30px;
+text-align:center;
+margin-bottom:35px;
 }
+
+/* заголовки уровней */
+
+.menu h2{
+
+font-size:32px;
+margin:25px 0 10px;
+color:#2f6b48;
+}
+
+/* категории */
+
+.menu h3{
+
+font-size:24px;
+margin:18px 0 10px;
+color:#355f47;
+}
+
+/* кнопки тем */
 
 .menu button{
 
-  border:none;
+display:inline-block;
 
-  border-radius:10px;
+font-size:22px;
 
-  padding:6px 12px;
+padding:14px 22px;
 
-  margin:4px;
+margin:6px;
 
-  background:#4fa66f;
+border-radius:14px;
 
-  color:white;
+border:2px solid #4fa66f;
 
-  font-size:14px;
+background:white;
 
-  cursor:pointer;
+color:#1f3d2a;
+
+cursor:pointer;
+
+transition:0.15s;
 }
 
 .menu button:hover{
-  background:#63b885;
-}
-/* ===== УПРАЖНЕНИЕ — УВЕЛИЧИТЬ РАЗМЕРЫ ===== */
 
-/* предложение */
+background:#f3f7f5;
+}
+
+/* ===== ВОПРОС ===== */
+
 #question{
 
-  font-size:48px;
-  font-weight:600;
+font-size:50px;
 
-  text-align:center;
+font-weight:600;
 
-  margin:40px 0;
+text-align:center;
 
-  color:#1f3d2a;
+margin:40px 0;
+
+color:#1f3d2a;
 }
 
 /* контейнер ответов */
 
 #answers{
-  max-width:700px;
-  margin:auto;
+
+max-width:700px;
+margin:auto;
 }
 
-/* кнопки ответов */
+/* ===== ОТВЕТЫ ===== */
 
 .exercise-screen .answer{
 
-  font-size:30px;
+width:100%;
 
-  padding:22px;
+font-size:32px;
 
-  margin:14px 0;
+padding:22px;
 
-  border-radius:16px;
+margin:14px 0;
 
+border-radius:16px;
+
+border:2px solid #4fa66f;
+
+background:white;
+
+color:#1f3d2a;
+
+cursor:pointer;
+
+transition:0.15s;
 }
-
-/* кнопка прослушивания */
-
-#speakBtn{
-
-  font-size:20px;
-
-  padding:10px 18px;
-
-  border-radius:12px;
-
-  margin-top:15px;
-}
-
-/* кнопка следующий */
-
-.exercise-screen .next{
-
-  font-size:22px;
-
-  padding:16px;
-}
-/* ===== СКРЫТЬ КНОПКУ "СЛЕДУЮЩИЙ" ПОКА НЕТ УПРАЖНЕНИЯ ===== */
-
-#question:contains("Выбери упражнение") ~ .next{
-  display:none;
-}
-
-/* ===== МЕНЮ СДЕЛАТЬ КРУПНЕЕ ===== */
-
-.menu h2{
-  font-size:28px;
-  margin-top:25px;
-  color:#2f6b48;
-}
-
-.menu h3{
-  font-size:22px;
-  margin:12px 0;
-  color:#355f47;
-}
-
-.menu button{
-
-  font-size:18px;
-
-  padding:10px 18px;
-
-  border-radius:12px;
-
-  margin:6px;
-
-  background:#4fa66f;
-
-  color:white;
-
-  cursor:pointer;
-}
-
-/* ===== КНОПКИ ОТВЕТОВ — БЕЛЫЕ ===== */
-
-.exercise-screen .answer{
-
-  background:white;
-
-  color:#1f3d2a;
-
-  border:2px solid #4fa66f;
-
-  font-size:30px;
-
-  padding:22px;
-
-  border-radius:16px;
-}
-
-/* hover */
 
 .exercise-screen .answer:hover{
-  background:#f3f7f5;
+
+background:#f3f7f5;
 }
 
 /* правильный */
 
 .exercise-screen .answer.correct{
-  background:#4fa66f;
-  color:white;
+
+background:#4fa66f;
+color:white;
 }
 
 /* неправильный */
 
 .exercise-screen .answer.wrong{
-  background:#e05656;
-  color:white;
-  border-color:#e05656;
+
+background:#e05656;
+color:white;
+border-color:#e05656;
 }
 
 /* ===== КНОПКА СЛЕДУЮЩИЙ ===== */
 
 .exercise-screen .next{
 
-  font-size:24px;
+display:none;
 
-  padding:16px 28px;
+margin:35px auto 0;
 
-  border-radius:14px;
+font-size:24px;
+
+padding:16px 30px;
+
+border-radius:14px;
+
+border:none;
+
+background:#4fa66f;
+
+color:white;
+
+cursor:pointer;
+}
+
+.exercise-screen .next:hover{
+background:#63b885;
 }
 
 /* ===== КНОПКА ПРОСЛУШИВАНИЯ ===== */
 
 #speakBtn{
 
-  font-size:22px;
+font-size:22px;
 
-  padding:12px 20px;
+padding:12px 20px;
 
-  border-radius:12px;
+border-radius:12px;
 
-  margin-top:15px;
+margin-top:20px;
+
+border:none;
+
+background:#4fa66f;
+
+color:white;
+
+cursor:pointer;
+}
+
+/* статистика */
+
+.stats{
+
+text-align:center;
+
+font-size:22px;
+
+margin-top:20px;
+
+color:#2e5f3e;
 }
