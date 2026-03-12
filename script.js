@@ -16,6 +16,7 @@ function start(topic) {
       correctCount = 0;
       wrongCount = 0;
 
+      // Сброс счётчиков
       document.getElementById("good").textContent = correctCount;
       document.getElementById("bad").textContent = wrongCount;
 
@@ -41,12 +42,14 @@ function showExercise() {
   const ex = exercises[currentExercise];
   questionDiv.textContent = ex.sentence;
 
+  // Очистка вариантов
   answersDiv.innerHTML = "";
 
+  // Добавляем кнопки ответов
   ex.options.forEach(option => {
     const btn = document.createElement("button");
     btn.textContent = option;
-    btn.classList.add("answer");
+    btn.classList.add("answer"); // стиль из CSS
     btn.onclick = () => checkAnswer(option, btn);
     answersDiv.appendChild(btn);
   });
@@ -62,7 +65,6 @@ function showExercise() {
     speakBtn.onclick = () => speakText(ex.sentence);
     answersDiv.parentNode.insertBefore(speakBtn, answersDiv.nextSibling);
   }
-  speakBtn.style.display = "inline-block";
 }
 
 // Проверка ответа
@@ -84,19 +86,21 @@ function checkAnswer(answer, clickedBtn) {
     }
   }
 
+  // Обновляем счёт
   if (answer === correct) correctCount++;
   else wrongCount++;
 
   document.getElementById("good").textContent = correctCount;
   document.getElementById("bad").textContent = wrongCount;
 
+  // Авто-переход через 1 сек
   setTimeout(() => {
     currentExercise++;
     showExercise();
   }, 1000);
 }
 
-// Озвучка текста
+// Озвучка текста по кнопке
 function speakText(text) {
   if ('speechSynthesis' in window) {
     const utter = new SpeechSynthesisUtterance(text);
