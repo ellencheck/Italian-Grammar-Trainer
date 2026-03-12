@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
   <meta charset="UTF-8">
   <title>Italian Grammar Trainer</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
   <div class="container">
@@ -14,120 +12,52 @@
     <h1>Italian Grammar Trainer</h1>
 
     <div class="menu">
-
       <!-- ========= A1 ========= -->
       <h2>A1</h2>
-
       <h3>Articoli</h3>
-
-      <button onclick="start('art_def')">
-        Articoli determinativi
-      </button>
-
-      <button onclick="start('art_indef')">
-        Articoli indeterminativi
-      </button>
-
-      <button onclick="start('art_prep')">
-        Preposizioni articolate
-      </button>
-
+      <button onclick="start('art_def')">Articoli determinativi</button>
+      <button onclick="start('art_indef')">Articoli indeterminativi</button>
+      <button onclick="start('art_prep')">Preposizioni articolate</button>
 
       <h3>Genere</h3>
-
-      <button onclick="start('genere')">
-        Maschile / Femminile
-      </button>
-
+      <button onclick="start('genere')">Maschile / Femminile</button>
 
       <h3>Presente</h3>
-
-      <button onclick="start('pres_reg')">
-        Presente regolari
-      </button>
-
-      <button onclick="start('pres_irr')">
-        Presente irregolari
-      </button>
-
+      <button onclick="start('pres_reg')">Presente regolari</button>
+      <button onclick="start('pres_irr')">Presente irregolari</button>
 
       <h3>Verbi riflessivi</h3>
-
-      <button onclick="start('riflessivi')">
-        Verbi riflessivi
-      </button>
-
+      <button onclick="start('riflessivi')">Verbi riflessivi</button>
 
       <h3>Pronomi possessivi</h3>
-
-      <button onclick="start('possessivi')">
-        mio / tuo / suo / nostro
-      </button>
-
+      <button onclick="start('possessivi')">mio / tuo / suo / nostro</button>
 
       <h3>Preposizioni</h3>
-
-      <button onclick="start('prep')">
-        Preposizioni
-      </button>
-
+      <button onclick="start('prep')">Preposizioni</button>
 
       <!-- ========= A2 ========= -->
       <h2>A2</h2>
-
       <h3>Imperfetto</h3>
-
-      <button onclick="start('imp_reg')">
-        Imperfetto regolari
-      </button>
-
-      <button onclick="start('imp_irr')">
-        Imperfetto irregolari
-      </button>
-
+      <button onclick="start('imp_reg')">Imperfetto regolari</button>
+      <button onclick="start('imp_irr')">Imperfetto irregolari</button>
 
       <h3>Passato prossimo</h3>
-
-      <button onclick="start('pp_reg')">
-        Passato prossimo regolari
-      </button>
-
-      <button onclick="start('pp_irr')">
-        Passato prossimo irregolari
-      </button>
-
+      <button onclick="start('pp_reg')">Passato prossimo regolari</button>
+      <button onclick="start('pp_irr')">Passato prossimo irregolari</button>
 
       <h3>Futuro</h3>
-
-      <button onclick="start('fut_reg')">
-        Futuro regolari
-      </button>
-
-      <button onclick="start('fut_irr')">
-        Futuro irregolari
-      </button>
-
+      <button onclick="start('fut_reg')">Futuro regolari</button>
+      <button onclick="start('fut_irr')">Futuro irregolari</button>
 
       <h3>Imperativo</h3>
-
-      <button onclick="start('impv_reg')">
-        Imperativo regolari
-      </button>
-
-      <button onclick="start('impv_irr')">
-        Imperativo irregolari
-      </button>
-
+      <button onclick="start('impv_reg')">Imperativo regolari</button>
+      <button onclick="start('impv_irr')">Imperativo irregolari</button>
     </div>
 
     <div class="card">
-
       <h2 id="question">Выбери упражнение</h2>
-
       <div id="answers"></div>
-
       <h3 id="result"></h3>
-
     </div>
 
     <div class="stats">
@@ -136,12 +66,8 @@
     </div>
 
     <button class="next" onclick="generate()">Следующий</button>
-
   </div>
 
-  <!-- JS -->
   <script src="script.js"></script>
-
 </body>
-
 </html>
