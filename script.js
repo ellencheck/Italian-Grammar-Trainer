@@ -3,6 +3,14 @@ let currentExercise = 0;
 let correctCount = 0;
 let wrongCount = 0;
 
+// функция перемешивания
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 // Начало темы
 function start(topic) {
   fetch("exercises/" + topic + ".json")
@@ -11,13 +19,20 @@ function start(topic) {
       return response.json();
     })
     .then(data => {
+
       exercises = data.exercises;
+
+      // перемешиваем упражнения
+      shuffle(exercises);
+
       currentExercise = 0;
       correctCount = 0;
       wrongCount = 0;
 
       document.getElementById("good").textContent = correctCount;
       document.getElementById("bad").textContent = wrongCount;
+
+      document.getElementById("nextBtn").style.display = "none";
 
       showExercise();
     })
@@ -46,7 +61,11 @@ function showExercise() {
 
   answersDiv.innerHTML = "";
 
-  ex.options.forEach(option => {
+  // перемешиваем варианты ответов
+  let options = [...ex.options];
+  shuffle(options);
+
+  options.forEach(option => {
 
     const btn = document.createElement("button");
     btn.textContent = option;
@@ -58,7 +77,7 @@ function showExercise() {
 
   });
 
-  // показываем кнопку "Следующий"
+  // кнопка скрыта до ответа
   nextBtn.style.display = "none";
 }
 
