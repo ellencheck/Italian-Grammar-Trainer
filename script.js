@@ -16,7 +16,7 @@ function start(topic) {
       correctCount = 0;
       wrongCount = 0;
 
-      // Обновляем счётчик
+      // Обновляем счётчики
       document.getElementById("good").textContent = correctCount;
       document.getElementById("bad").textContent = wrongCount;
 
@@ -33,6 +33,7 @@ function showExercise() {
   const questionDiv = document.getElementById("question");
   const answersDiv = document.getElementById("answers");
 
+  // Проверка на конец темы
   if (currentExercise >= exercises.length) {
     questionDiv.textContent = "Тема завершена!";
     answersDiv.innerHTML = "";
@@ -45,16 +46,17 @@ function showExercise() {
   // Очистка вариантов
   answersDiv.innerHTML = "";
 
+  // Кнопки вариантов
   ex.options.forEach(option => {
     const btn = document.createElement("button");
     btn.textContent = option;
-    btn.classList.add("answer"); // CSS управляет дизайном
+    btn.classList.add("answer"); // дизайн берется из CSS
 
     btn.onclick = () => checkAnswer(option, btn);
     answersDiv.appendChild(btn);
   });
 
-  // Добавляем кнопку озвучки
+  // Кнопка озвучки
   let speakBtn = document.getElementById("speakBtn");
   if (!speakBtn) {
     speakBtn = document.createElement("button");
@@ -75,7 +77,7 @@ function checkAnswer(answer, clickedBtn) {
   const buttons = document.getElementById("answers").children;
 
   for (let btn of buttons) {
-    btn.disabled = true;
+    btn.disabled = true; // нельзя повторно нажимать
 
     if (btn.textContent === correct) {
       btn.classList.add("correct");
@@ -95,7 +97,7 @@ function checkAnswer(answer, clickedBtn) {
   document.getElementById("good").textContent = correctCount;
   document.getElementById("bad").textContent = wrongCount;
 
-  // Автоматический переход к следующему через 1 сек
+  // Переход к следующему через 1 секунду
   setTimeout(() => {
     currentExercise++;
     showExercise();
