@@ -1,0 +1,74 @@
+{
+  "topic": "imp_irreg",
+  "exercises": [
+    {"sentence":"Io ___ sempre felice da bambino.","options":["ero","eri","era","eravamo","eravate","erano"],"answer":"ero"},
+    {"sentence":"Tu ___ molto contento ieri.","options":["ero","eri","era","eravamo","eravate","erano"],"answer":"eri"},
+    {"sentence":"Lui ___ stanco dopo la scuola.","options":["ero","eri","era","eravamo","eravate","erano"],"answer":"era"},
+    {"sentence":"Noi ___ amici inseparabili.","options":["ero","eri","era","eravamo","eravate","erano"],"answer":"eravamo"},
+    {"sentence":"Voi ___ sempre gentili.","options":["ero","eri","era","eravamo","eravate","erano"],"answer":"eravate"},
+    {"sentence":"Loro ___ spesso a casa dei nonni.","options":["ero","eri","era","eravamo","eravate","erano"],"answer":"erano"},
+
+    {"sentence":"Io ___ sempre molta sete.","options":["avevo","avevi","aveva","avevamo","avevate","avevano"],"answer":"avevo"},
+    {"sentence":"Tu ___ due cani da piccolo.","options":["avevo","avevi","aveva","avevamo","avevate","avevano"],"answer":"avevi"},
+    {"sentence":"Lei ___ sempre un quaderno con sé.","options":["avevo","avevi","aveva","avevamo","avevate","avevano"],"answer":"aveva"},
+    {"sentence":"Noi ___ molti libri a casa.","options":["avevo","avevi","aveva","avevamo","avevate","avevano"],"answer":"avevamo"},
+    {"sentence":"Voi ___ problemi con la matematica.","options":["avevo","avevi","aveva","avevamo","avevate","avevano"],"answer":"avevate"},
+    {"sentence":"Loro ___ una bella macchina rossa.","options":["avevo","avevi","aveva","avevamo","avevate","avevano"],"answer":"avevano"},
+
+    {"sentence":"Io ___ sempre colazione alle sette.","options":["facevo","facevi","faceva","facevamo","facevate","facevano"],"answer":"facevo"},
+    {"sentence":"Tu ___ molti disegni da piccolo.","options":["facevo","facevi","faceva","facevamo","facevate","facevano"],"answer":"facevi"},
+    {"sentence":"Lui ___ sempre sport la domenica.","options":["facevo","facevi","faceva","facevamo","facevate","facevano"],"answer":"faceva"},
+    {"sentence":"Noi ___ feste con gli amici.","options":["facevo","facevi","faceva","facevamo","facevate","facevano"],"answer":"facevamo"},
+    {"sentence":"Voi ___ sempre domande curiose.","options":["facevo","facevi","faceva","facevamo","facevate","facevano"],"answer":"facevate"},
+    {"sentence":"Loro ___ molto rumore.","options":["facevo","facevi","faceva","facevamo","facevate","facevano"],"answer":"facevano"},
+
+    {"sentence":"Io ___ spesso la verità.","options":["dicevo","dicevi","diceva","dicevamo","dicevate","dicevano"],"answer":"dicevo"},
+    {"sentence":"Tu ___ sempre le bugie da piccolo.","options":["dicevo","dicevi","diceva","dicevamo","dicevate","dicevano"],"answer":"dicevi"},
+    {"sentence":"Lei ___ cose interessanti.","options":["dicevo","dicevi","diceva","dicevamo","dicevate","dicevano"],"answer":"diceva"},
+    {"sentence":"Noi ___ tutto agli amici.","options":["dicevo","dicevi","diceva","dicevamo","dicevate","dicevano"],"answer":"dicevamo"},
+    {"sentence":"Voi ___ spesso parole gentili.","options":["dicevo","dicevi","diceva","dicevamo","dicevate","dicevano"],"answer":"dicevate"},
+    {"sentence":"Loro ___ sempre la stessa storia.","options":["dicevo","dicevi","diceva","dicevamo","dicevate","dicevano"],"answer":"dicevano"},
+
+    {"sentence":"Io ___ sempre puntuale.","options":["venivo","venivi","veniva","venivamo","venivate","venivano"],"answer":"venivo"},
+    {"sentence":"Tu ___ a scuola in bicicletta.","options":["venivo","venivi","veniva","venivamo","venivate","venivano"],"answer":"venivi"},
+    {"sentence":"Lui ___ spesso a trovare i nonni.","options":["venivo","venivi","veniva","venivamo","venivate","venivano"],"answer":"veniva"},
+    {"sentence":"Noi ___ da lontano.","options":["venivo","venivi","veniva","venivamo","venivate","venivano"],"answer":"venivamo"},
+    {"sentence":"Voi ___ sempre in ritardo.","options":["venivo","venivi","veniva","venivamo","venivate","venivano"],"answer":"venivate"},
+    {"sentence":"Loro ___ a piedi.","options":["venivo","venivi","veniva","venivamo","venivate","venivano"],"answer":"venivano"},
+
+    {"sentence":"Io ___ poca acqua da piccolo.","options":["bevevo","bevevi","beveva","bevevamo","bevevate","bevevano"],"answer":"bevevo"},
+    {"sentence":"Tu ___ sempre il succo d'arancia.","options":["bevevo","bevevi","beveva","bevevamo","bevevate","bevevano"],"answer":"bevevi"},
+    {"sentence":"Lei ___ troppo caffè.","options":["bevevo","bevevi","beveva","bevevamo","bevevate","bevevano"],"answer":"beveva"},
+    {"sentence":"Noi ___ acqua durante il pranzo.","options":["bevevo","bevevi","beveva","bevevamo","bevevate","bevevano"],"answer":"bevevamo"},
+    {"sentence":"Voi ___ spesso latte fresco.","options":["bevevo","bevevi","beveva","bevevamo","bevevate","bevevano"],"answer":"bevevate"},
+    {"sentence":"Loro ___ tè caldo la sera.","options":["bevevo","bevevi","beveva","bevevamo","bevevate","bevevano"],"answer":"bevevano"},
+
+    {"sentence":"Io ___ al mare ogni estate.","options":["andavo","andavi","andava","andavamo","andavate","andavano"],"answer":"andavo"},
+    {"sentence":"Tu ___ sempre a piedi a scuola.","options":["andavo","andavi","andava","andavamo","andavate","andavano"],"answer":"andavi"},
+    {"sentence":"Lui ___ in montagna da piccolo.","options":["andavo","andavi","andava","andavamo","andavate","andavano"],"answer":"andava"},
+    {"sentence":"Noi ___ spesso al cinema.","options":["andavo","andavi","andava","andavamo","andavate","andavano"],"answer":"andavamo"},
+    {"sentence":"Voi ___ in vacanza insieme.","options":["andavo","andavi","andava","andavamo","andavate","andavano"],"answer":"andavate"},
+    {"sentence":"Loro ___ sempre a piedi da scuola.","options":["andavo","andavi","andava","andavamo","andavate","andavano"],"answer":"andavano"},
+
+    {"sentence":"Io ___ a casa dei nonni.","options":["stavo","stavi","stava","stavamo","stavate","stavano"],"answer":"stavo"},
+    {"sentence":"Tu ___ male da piccolo.","options":["stavo","stavi","stava","stavamo","stavate","stavano"],"answer":"stavi"},
+    {"sentence":"Lui ___ tranquillo in classe.","options":["stavo","stavi","stava","stavamo","stavate","stavano"],"answer":"stava"},
+    {"sentence":"Noi ___ sempre allegri.","options":["stavo","stavi","stava","stavamo","stavate","stavano"],"answer":"stavamo"},
+    {"sentence":"Voi ___ attenti durante le lezioni.","options":["stavo","stavi","stava","stavamo","stavate","stavano"],"answer":"stavate"},
+    {"sentence":"Loro ___ a casa tutto il giorno.","options":["stavo","stavi","stava","stavamo","stavate","stavano"],"answer":"stavano"},
+
+    {"sentence":"Io ___ sempre i compiti da solo.","options":["davo","davi","dava","davamo","davate","davano"],"answer":"davo"},
+    {"sentence":"Tu ___ consigli agli amici.","options":["davo","davi","dava","davamo","davate","davano"],"answer":"davi"},
+    {"sentence":"Lei ___ lezioni di musica.","options":["davo","davi","dava","davamo","davate","davano"],"answer":"dava"},
+    {"sentence":"Noi ___ aiuto quando potevamo.","options":["davo","davi","dava","davamo","davate","davano"],"answer":"davamo"},
+    {"sentence":"Voi ___ regali ai bambini.","options":["davo","davi","dava","davamo","davate","davano"],"answer":"davate"},
+    {"sentence":"Loro ___ molto affetto.","options":["davo","davi","dava","davamo","davate","davano"],"answer":"davano"},
+
+    {"sentence":"Io ___ sempre le risposte.","options":["sapevo","sapevi","sapeva","sapevamo","sapevate","sapevano"],"answer":"sapevo"},
+    {"sentence":"Tu ___ dove andare.","options":["sapevo","sapevi","sapeva","sapevamo","sapevate","sapevano"],"answer":"sapevi"},
+    {"sentence":"Lui ___ parlare bene l'inglese.","options":["sapevo","sapevi","sapeva","sapevamo","sapevate","sapevano"],"answer":"sapeva"},
+    {"sentence":"Noi ___ come risolvere i problemi.","options":["sapevo","sapevi","sapeva","sapevamo","sapevate","sapevano"],"answer":"sapevamo"},
+    {"sentence":"Voi ___ cosa fare.","options":["sapevo","sapevi","sapeva","sapevamo","sapevate","sapevano"],"answer":"sapevate"},
+    {"sentence":"Loro ___ sempre tutto.","options":["sapevo","sapevi","sapeva","sapevamo","sapevate","sapevano"],"answer":"sapevano"}
+  ]
+}
