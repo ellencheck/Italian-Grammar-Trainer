@@ -40,7 +40,7 @@ function start(topic) {
     })
     .catch(error => {
         console.error(error);
-        alert("Ошибка загрузки темы: " + topic);
+        alert("Ошибка загрузки темы: " + topic + ". Возможно повреждён JSON.");
     });
 }
 
@@ -118,5 +118,6 @@ function generate() {
         showExercise();
     }
 }
+
 
 
