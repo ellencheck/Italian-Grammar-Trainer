@@ -19,12 +19,13 @@ function start(topic) {
         if (!response.ok) throw new Error("Файл не найден: " + topic);
         return response.json();
     })
-    .then(data => {
+   .then(data => {
 
-        exercises = (Array.isArray(data) ? data[0].exercises : data.exercises).slice();
+    if (Array.isArray(data)) data = data[0];
 
-        shuffle(exercises); // перемешиваем упражнения
+    exercises = data.exercises.slice();
 
+    shuffle(exercises);
         currentExercise = 0;
         correctCount = 0;
         wrongCount = 0;
@@ -117,4 +118,5 @@ function generate() {
         showExercise();
     }
 }
+
 
