@@ -1,0 +1,60 @@
+{
+  "topic": "imp_reg",
+  "exercises": [
+    {"sentence":"Io ___ sempre la pizza il sabato.","options":["mangiavo","mangiavi","mangiava","mangiavamo","mangiavate","mangiavano"],"answer":"mangiavo"},
+    {"sentence":"Tu ___ molto quando eri bambino.","options":["parlavo","parlavi","parlava","parlavamo","parlavate","parlavano"],"answer":"parlavi"},
+    {"sentence":"Lui ___ al parco ogni giorno.","options":["giocavo","giocavi","giocava","giocavamo","giocavate","giocavano"],"answer":"giocava"},
+    {"sentence":"Noi ___ spesso insieme.","options":["camminavo","camminavi","camminava","camminavamo","camminavate","camminavano"],"answer":"camminavamo"},
+    {"sentence":"Voi ___ sempre tardi.","options":["arrivavo","arrivavi","arrivava","arrivavamo","arrivavate","arrivavano"],"answer":"arrivavate"},
+    {"sentence":"Loro ___ in giardino.","options":["lavoravo","lavoravi","lavorava","lavoravamo","lavoravate","lavoravano"],"answer":"lavoravano"},
+    
+    {"sentence":"Io ___ la televisione la sera.","options":["guardavo","guardavi","guardava","guardavamo","guardavate","guardavano"],"answer":"guardavo"},
+    {"sentence":"Tu ___ il cane ogni mattina.","options":["portavo","portavi","portava","portavamo","portavate","portavano"],"answer":"portavi"},
+    {"sentence":"Lei ___ la musica alla radio.","options":["ascoltavo","ascoltavi","ascoltava","ascoltavamo","ascoltavate","ascoltavano"],"answer":"ascoltava"},
+    {"sentence":"Noi ___ nel parco dopo scuola.","options":["giocavo","giocavi","giocava","giocavamo","giocavate","giocavano"],"answer":"giocavamo"},
+    {"sentence":"Voi ___ molto durante la lezione.","options":["parlavo","parlavi","parlava","parlavamo","parlavate","parlavano"],"answer":"parlavate"},
+    {"sentence":"Loro ___ sempre insieme.","options":["viaggiavo","viaggiavi","viaggiava","viaggiavamo","viaggiavate","viaggiavano"],"answer":"viaggiavano"},
+    
+    {"sentence":"Io ___ spesso in biblioteca.","options":["studiavo","studiavi","studiava","studiavamo","studiavate","studiavano"],"answer":"studiavo"},
+    {"sentence":"Tu ___ la porta lentamente.","options":["chiudevo","chiudevi","chiudeva","chiudevamo","chiudevate","chiudevano"],"answer":"chiudevi"},
+    {"sentence":"Lui ___ il giornale ogni mattina.","options":["compravo","compravi","comprava","compravamo","compravate","compravano"],"answer":"comprava"},
+    {"sentence":"Noi ___ molto quando eravamo giovani.","options":["viaggiavo","viaggiavi","viaggiava","viaggiavamo","viaggiavate","viaggiavano"],"answer":"viaggiavamo"},
+    {"sentence":"Voi ___ sempre la verità.","options":["raccontavo","raccontavi","raccontava","raccontavamo","raccontavate","raccontavano"],"answer":"raccontavate"},
+    {"sentence":"Loro ___ in città.","options":["abitavo","abitavi","abitava","abitavamo","abitavate","abitavano"],"answer":"abitavano"},
+    
+    {"sentence":"Io ___ spesso con gli amici.","options":["uscivo","uscivi","usciva","uscivamo","uscivate","uscivano"],"answer":"uscivo"},
+    {"sentence":"Tu ___ la finestra ogni mattina.","options":["aprivo","aprivi","apriva","aprivamo","aprivate","aprivano"],"answer":"aprivi"},
+    {"sentence":"Lei ___ molto piano.","options":["parlavo","parlavi","parlava","parlavamo","parlavate","parlavano"],"answer":"parlava"},
+    {"sentence":"Noi ___ la cena insieme.","options":["preparavo","preparavi","preparava","preparavamo","preparavate","preparavano"],"answer":"preparavamo"},
+    {"sentence":"Voi ___ la casa la domenica.","options":["pulivo","pulivi","puliva","pulivamo","pulivate","pulivano"],"answer":"pulivate"},
+    {"sentence":"Loro ___ spesso al mare.","options":["andavo","andavi","andava","andavamo","andavate","andavano"],"answer":"andavano"},
+    
+    {"sentence":"Io ___ sempre alle otto.","options":["arrivavo","arrivavi","arrivava","arrivavamo","arrivavate","arrivavano"],"answer":"arrivavo"},
+    {"sentence":"Tu ___ la chitarra.","options":["suonavo","suonavi","suonava","suonavamo","suonavate","suonavano"],"answer":"suonavi"},
+    {"sentence":"Lui ___ molto bene.","options":["cantavo","cantavi","cantava","cantavamo","cantavate","cantavano"],"answer":"cantava"},
+    {"sentence":"Noi ___ spesso insieme.","options":["ballavo","ballavi","ballava","ballavamo","ballavate","ballavano"],"answer":"ballavamo"},
+    {"sentence":"Voi ___ le valigie.","options":["preparavo","preparavi","preparava","preparavamo","preparavate","preparavano"],"answer":"preparavate"},
+    {"sentence":"Loro ___ il giardino.","options":["curavo","curavi","curava","curavamo","curavate","curavano"],"answer":"curavano"},
+    
+    {"sentence":"Io ___ il caffè ogni mattina.","options":["bevevo","bevevi","beveva","bevevamo","bevevate","bevevano"],"answer":"bevevo"},
+    {"sentence":"Tu ___ sempre molto.","options":["ridevo","ridevi","rideva","ridevamo","ridevate","ridevano"],"answer":"ridevi"},
+    {"sentence":"Lei ___ la storia.","options":["raccontavo","raccontavi","raccontava","raccontavamo","raccontavate","raccontavano"],"answer":"raccontava"},
+    {"sentence":"Noi ___ i compiti.","options":["facevo","facevi","faceva","facevamo","facevate","facevano"],"answer":"facevamo"},
+    {"sentence":"Voi ___ molto lentamente.","options":["camminavo","camminavi","camminava","camminavamo","camminavate","camminavano"],"answer":"camminavate"},
+    {"sentence":"Loro ___ sempre felici.","options":["sembravo","sembravi","sembrava","sembravamo","sembravate","sembravano"],"answer":"sembravano"},
+
+    {"sentence":"Io ___ ogni mattina al lavoro.","options":["telefonavo","telefonavi","telefonava","telefonavamo","telefonavate","telefonavano"],"answer":"telefonavo"},
+    {"sentence":"Tu ___ spesso in palestra.","options":["allenavo","allenavi","allenava","allenavamo","allenavate","allenavano"],"answer":"allenavi"},
+    {"sentence":"Lui ___ sempre i compiti prima di cena.","options":["finivo","finivi","finiva","finivamo","finivate","finivano"],"answer":"finiva"},
+    {"sentence":"Noi ___ film il venerdì sera.","options":["guardavo","guardavi","guardava","guardavamo","guardavate","guardavano"],"answer":"guardavamo"},
+    {"sentence":"Voi ___ sempre le notizie online.","options":["leggevo","leggevi","leggeva","leggevamo","leggevate","leggevano"],"answer":"leggevate"},
+    {"sentence":"Loro ___ molto in estate.","options":["viaggiavo","viaggiavi","viaggiava","viaggiavamo","viaggiavate","viaggiavano"],"answer":"viaggiavano"},
+
+    {"sentence":"Io ___ spesso a teatro.","options":["andavo","andavi","andava","andavamo","andavate","andavano"],"answer":"andavo"},
+    {"sentence":"Tu ___ a scuola in bicicletta.","options":["andavo","andavi","andava","andavamo","andavate","andavano"],"answer":"andavi"},
+    {"sentence":"Lei ___ sempre tardi a letto.","options":["andavo","andavi","andava","andavamo","andavate","andavano"],"answer":"andava"},
+    {"sentence":"Noi ___ libri ogni mese.","options":["leggevo","leggevi","leggeva","leggevamo","leggevate","leggevano"],"answer":"leggevamo"},
+    {"sentence":"Voi ___ spesso in vacanza al mare.","options":["viaggiavo","viaggiavi","viaggiava","viaggiavamo","viaggiavate","viaggiavano"],"answer":"viaggiavate"},
+    {"sentence":"Loro ___ i vestiti per le feste.","options":["preparavo","preparavi","preparava","preparavamo","preparavate","preparavano"],"answer":"preparavano"}
+  ]
+}
