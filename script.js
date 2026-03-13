@@ -21,7 +21,7 @@ function start(topic) {
     })
     .then(data => {
 
-        exercises = data.exercises.slice();
+        exercises = (Array.isArray(data) ? data[0].exercises : data.exercises).slice();
 
         shuffle(exercises); // перемешиваем упражнения
 
@@ -117,3 +117,4 @@ function generate() {
         showExercise();
     }
 }
+
