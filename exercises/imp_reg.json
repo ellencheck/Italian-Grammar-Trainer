@@ -44,7 +44,7 @@
     {"sentence":"Loro ___ sempre felici.","options":["sembravo","sembravi","sembrava","sembravamo","sembravate","sembravano"],"answer":"sembravano"},
 
     {"sentence":"Io ___ ogni mattina al lavoro.","options":["telefonavo","telefonavi","telefonava","telefonavamo","telefonavate","telefonavano"],"answer":"telefonavo"},
-    {"sentence":"Tu ___ spesso in palestra.","options":["allenavo","allenavi","allenava","allenavamo","allenavate","allenavano"],"answer":"allenavi"},
+    {"sentence":"Tu ti ___ spesso in palestra.","options":["allenavo","allenavi","allenava","allenavamo","allenavate","allenavano"],"answer":"allenavi"},
     {"sentence":"Lui ___ sempre i compiti prima di cena.","options":["finivo","finivi","finiva","finivamo","finivate","finivano"],"answer":"finiva"},
     {"sentence":"Noi ___ film il venerdì sera.","options":["guardavo","guardavi","guardava","guardavamo","guardavate","guardavano"],"answer":"guardavamo"},
     {"sentence":"Voi ___ sempre le notizie online.","options":["leggevo","leggevi","leggeva","leggevamo","leggevate","leggevano"],"answer":"leggevate"},
