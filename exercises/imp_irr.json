@@ -57,7 +57,7 @@
     {"sentence":"Voi ___ attenti durante le lezioni.","options":["stavo","stavi","stava","stavamo","stavate","stavano"],"answer":"stavate"},
     {"sentence":"Loro ___ a casa tutto il giorno.","options":["stavo","stavi","stava","stavamo","stavate","stavano"],"answer":"stavano"},
 
-    {"sentence":"Io ___ sempre i compiti da solo.","options":["davo","davi","dava","davamo","davate","davano"],"answer":"davo"},
+    {"sentence":"Io ___ sempre da mangiare ai cani.","options":["davo","davi","dava","davamo","davate","davano"],"answer":"davo"},
     {"sentence":"Tu ___ consigli agli amici.","options":["davo","davi","dava","davamo","davate","davano"],"answer":"davi"},
     {"sentence":"Lei ___ lezioni di musica.","options":["davo","davi","dava","davamo","davate","davano"],"answer":"dava"},
     {"sentence":"Noi ___ aiuto quando potevamo.","options":["davo","davi","dava","davamo","davate","davano"],"answer":"davamo"},
