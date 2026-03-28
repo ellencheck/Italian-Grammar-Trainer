@@ -26,18 +26,18 @@
 
 {"sentence":"Studio ___ mattina.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"di"},
 {"sentence":"Cammino ___ il parco.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"per"},
-{"sentence":"Leggo un testo _ Neruda.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"su"},
+{"sentence":"Leggo un saggio_ Neruda.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"su"},
 {"sentence":"Vado ___ piedi.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
-{"sentence":"Scrivo ___ penna.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"con"},
+{"sentence":"Scrivo ___ la penna.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"con"},
 {"sentence":"Abito ___ Spagna.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"in"},
 {"sentence":"Esco ___ casa.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"di"},
-{"sentence":"Vengo ___ medico.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"da"},
-{"sentence":"Andiamo ___ cinema.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
+{"sentence":"Romeo viene ___ Verona.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"da"},
+{"sentence":"Andiamo ___ casa.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
 {"sentence":"Cammino ___ strada.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"per"},
 
-{"sentence":"Il cane dorme ___ divano.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"su"},
+{"sentence":"Il cane dorme ___ di loro.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"su"},
 {"sentence":"Il regalo è ___ Anna.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"per"},
-{"sentence":"Parlo ___ telefono.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"al"},
+{"sentence":"Parlo ___ gesti.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
 {"sentence":"Il gatto passa ___ la sedia e il tavolo.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"tra"},
 {"sentence":"Il cane corre ___ il giardino.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"per"},
 {"sentence":"Scrivo ___ Marco.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
@@ -48,14 +48,15 @@
 
 {"sentence":"Restiamo ___ casa.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"},
 {"sentence":"Studio ___ università.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"in"},
-{"sentence":"Vengo ___ bar.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"dal"},
-{"sentence":"Il gatto salta ___ tavolo.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"sul"},
+{"sentence":"Vengo ___ te.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"da"},
+{"sentence":"Il gatto salta ___ di te.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"su"},
 {"sentence":"Il cane corre ___ strada.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"per"},
 {"sentence":"La pizzeria è ___ il cinema e la banca.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"fra"},
 {"sentence":"Parliamo ___ musica.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"di"},
-{"sentence":"Scrivo ___ computer.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"con"},
+{"sentence":"Scrivo ___ la penna.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"con"},
+
 {"sentence":"Vivo ___ Francia.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"in"},
-{"sentence":"Andiamo ___ mare.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"al"}
+{"sentence":"Andiamo ___ mare.","options":["di","a","da","in","con","su","per","tra","fra"],"answer":"a"}
 ]
 }
-]
+
